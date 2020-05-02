@@ -13,8 +13,6 @@ Backend in WordPress.
 
 ## 🚀 Development
 
-## Development
-
 * Navigate into site’s directory.
 
 ```shell
