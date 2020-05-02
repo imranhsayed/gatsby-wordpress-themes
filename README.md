@@ -36,10 +36,10 @@ plugin directory and activate it.
 
 4. - Set Header menu as `HCMS Header Menu`
    
-   ![](demos/header-menu.png)
+   ![](demos/header-menu-demo.png)
    
    - Set Footer menu as `HCMS Footer Menu`
-   ![](demos/footer-menu.png)
+   ![](demos/footer-menu-demo.png)
    
 5. You can also set text widgets in #HCMS Footer #1 and #HCMS Footer #2 under Appearance  > Widgets in WordPress.
     
