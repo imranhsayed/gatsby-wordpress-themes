@@ -1,5 +1,9 @@
 const blogTemplate = require.resolve( '../src/templates/blog-template' );
-const singlePostTemplate = require.resolve( '../src/templates/single/Post' );
+const singlePostTemplate = require.resolve( '../src/templates/single-post-template' );
+const { slash } = require(`gatsby-core-utils`)
+
+const path = require(`path`)
+
 
 const GET_POSTS = `
 query GET_POSTS {
@@ -59,16 +63,22 @@ module.exports = async ( { actions, graphql } ) => {
 			} );
 	};
 
+	const postTemplate = path.resolve(`./src/templates/single-post-template.js`)
+
 	await fetchPosts().then( allPosts => {
+
 		allPosts &&
 		allPosts.map( ( post ) => {
-			createPage( {
-				path: `/blog/${post.uri}`,
-				component: singlePostTemplate,
-				context: {
-					...post
-				}
-			} );
+
+			console.warn( post );
+
+		createPage({
+			path: `/blog${post.uri}`,
+			component: slash(postTemplate),
+			context: {
+				id: post.id,
+			},
+		})
 		});
 
 		createPage( blogPage );
