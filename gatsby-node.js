@@ -1,5 +1,6 @@
-const createPosts = require( './utils/create-posts' );
+const createAllPages = require( './utils/create-pages' );
 
+// Create all pages.
 exports.createPages = async ( { actions, graphql } ) => {
-	await createPosts( { actions, graphql } );
+	await createAllPages( { actions, graphql } );
 };

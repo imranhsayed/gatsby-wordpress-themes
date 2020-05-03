@@ -3,9 +3,7 @@ import React from 'react';
 
 console.warn( 'ok' );
 
-const SinglePostTemplate = ( props ) => {
-
-	console.warn( 'ame', props );
+const Post = ( props ) => {
 
 	const {
 		      pageContext: { id, postId, title, content, featuredImage }
@@ -36,4 +34,4 @@ const SinglePostTemplate = ( props ) => {
 	)
 };
 
-export default SinglePostTemplate;
+export default Post;
