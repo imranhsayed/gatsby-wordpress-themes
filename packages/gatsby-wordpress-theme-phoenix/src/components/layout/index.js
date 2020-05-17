@@ -15,7 +15,7 @@ import Footer from "../footer";
 const Layout = ( { children, data }) => {
   return (
     <>
-      {/*<Header data={ data }/>*/}
+      <Header data={ data }/>
 	    <main className="main-container container">{children}</main>
 	  <Footer data={ data }/>
     </>
