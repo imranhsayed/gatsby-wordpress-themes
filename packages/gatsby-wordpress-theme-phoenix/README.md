@@ -31,8 +31,22 @@ plugin directory and activate it.
 
 2. Clone and activate [wp-graphql](https://github.com/wp-graphql/wp-graphql) in WordPress plugin directory.
 
-3. * Rename `.env-example` file to `.env` and add your WordPress SITE_URL in `site` directory : 
-`SITE_URL=https://example.com`
+3. In your gatsby project
+* `npm i gatsby-wordpress-theme-phoenix`
+* Now in your `gatsby-config.js`, tell gatsby that you will be using this theme and put your wordpress site url.
+
+```javascript
+module.exports = {
+	plugins: [
+		// Tell gatsby which theme you will be using.
+		{
+		resolve: "gatsby-wordpress-theme-phoenix",
+		options: {
+			wordPressUrl: 'xxxxx'
+		}
+	} ]
+};
+```
 
 4. - Set Header menu as `HCMS Header Menu`
    
@@ -91,7 +105,3 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
 
 12. **`README.md`**: A text file containing useful reference information about your project.
-
-### Useful Links ###
-1. [Setting workspaces with yarn](https://www.gatsbyjs.org/blog/2019-05-22-setting-up-yarn-workspaces-for-theme-development/) for theme development
-2. [Installing a gatsby theme](https://www.gatsbyjs.org/docs/themes/using-a-gatsby-theme/) and setting it up.

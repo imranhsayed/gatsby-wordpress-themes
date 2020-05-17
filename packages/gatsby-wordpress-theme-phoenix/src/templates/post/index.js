@@ -1,8 +1,6 @@
 
 import React from 'react';
 
-console.warn( 'ok' );
-
 const Post = ( props ) => {
 
 	const {

@@ -1,77 +1,34 @@
 {
   "name": "gatsby-wordpress-theme",
-  "private": false,
-  "description": "Gatsby theme for WordPress",
-  "version": "0.1.0",
-  "author": "Imran Sayed",
-  "dependencies": {
-    "classnames": "^2.2.6",
-    "dateformat": "^3.0.3",
-    "gatsby": "^2.20.35",
-    "gatsby-image": "^2.3.5",
-    "gatsby-plugin-manifest": "^2.3.7",
-    "gatsby-plugin-offline": "^3.1.5",
-    "gatsby-plugin-react-helmet": "^3.2.5",
-    "gatsby-plugin-sass": "^2.3.0",
-    "gatsby-plugin-sharp": "^2.5.7",
-    "gatsby-source-filesystem": "^2.2.5",
-    "gatsby-source-graphql": "^2.5.0",
-    "gatsby-transformer-sharp": "^2.4.7",
-    "lodash": "^4.17.15",
-    "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^6.0.0",
-    "react-responsive": "^8.0.3"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@storybook/addon-actions": "^5.3.18",
-    "@storybook/addon-links": "^5.3.18",
-    "@storybook/addons": "^5.3.18",
-    "@storybook/react": "^5.3.18",
-    "babel-jest": "^25.4.0",
-    "babel-loader": "^8.1.0",
-    "babel-preset-gatsby": "^0.3.6",
-    "dotenv": "^8.2.0",
-    "identity-obj-proxy": "^3.0.0",
-    "jest": "^25.4.0",
-    "node-sass": "^4.14.0",
-    "prettier": "2.0.4",
-    "react-test-renderer": "^16.13.1",
-    "sass-loader": "^8.0.2",
-    "sass-mq": "^5.0.1"
-  },
-  "keywords": [
-    "gatsby",
-    "gatsby-wordpress-theme",
-    "gatsby-theme",
-    "javascript",
-    "react-js",
-    "decoupled",
-    "headless"
+  "version": "1.0.0",
+  "private": true,
+  "description": "Gatsby WordPress Theme Project",
+  "main": "index.js",
+  "workspaces": [
+	"site",
+	"packages/*"
   ],
-  "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "dev": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run dev",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "jest",
-    "test:debug": "jest --runInBand",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage=true",
-    "test:update": "jest --verbose --updateSnapshot",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+	"dev": "yarn workspace site dev",
+	"build": "yarn workspace site build",
+	"start": "yarn workspace site start",
+	"clean": "yarn workspace site clean"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/imranhsayed/gatsby-wordpress-theme"
+    "url": "git+https://github.com/imranhsayed/gatsby-wordpress-theme.git"
   },
+  "keywords": [
+    "gatsby-wordpress-theme",
+    "gatsby",
+    "wordpress",
+    "react",
+    "javascript"
+  ],
+  "author": "Imran Sayed",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/imranhsayed/gatsby-wordpress-theme/issues"
-  }
+  },
+  "homepage": "https://github.com/imranhsayed/gatsby-wordpress-theme#readme"
 }
