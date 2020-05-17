@@ -1,5 +1,7 @@
 require('dotenv').config();
 
+console.warn( process.env.SITE_URL );
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby WordPress Theme`,

@@ -1,0 +1,29 @@
+{
+  "name": "site",
+  "version": "0.0.1",
+  "description": "Site to test the Gatbys WordPress Theme Phoenix",
+  "main": "gatsby.config.js",
+  "scripts": {
+	"build": "gatsby build",
+	"dev": "gatsby develop",
+	"format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+	"start": "npm run dev",
+	"serve": "gatsby serve",
+	"clean": "gatsby clean",
+	"test": "jest",
+	"test:debug": "jest --runInBand",
+	"test:watch": "jest --watch",
+	"test:coverage": "jest --coverage=true",
+	"test:update": "jest --verbose --updateSnapshot",
+	"storybook": "start-storybook -p 6006",
+	"build-storybook": "build-storybook"
+  },
+  "author": "Imran Sayed",
+  "license": "MIT",
+  "dependencies": {
+    "gatsby": "^2.21.33",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+	"gatsby-wordpress-theme-phoenix": "*"
+  }
+}
