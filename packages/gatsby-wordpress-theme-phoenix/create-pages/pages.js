@@ -1,8 +1,8 @@
 const { slash } = require( `gatsby-core-utils` );
-const customTemplates = [ '/blog/' ];
+const customTemplates = [ '/blog/', '/' ];
 const singlePageTemplate = require.resolve(`../src/templates/page/index.js`);
 
-// Get all the posts and pages.
+// Get all the pages.
 const GET_PAGES = `
 query GET_PAGES {
   HWGraphQL {
@@ -12,7 +12,6 @@ query GET_PAGES {
         id
         title
         content
-        pageId
       }
     }
   }
