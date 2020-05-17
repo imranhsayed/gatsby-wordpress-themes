@@ -31,8 +31,22 @@ plugin directory and activate it.
 
 2. Clone and activate [wp-graphql](https://github.com/wp-graphql/wp-graphql) in WordPress plugin directory.
 
-3. * Rename `.env-example` file to `.env` and add your WordPress SITE_URL : 
-`SITE_URL=https://example.com`
+3. In your gatsby project
+* `npm i gatsby-wordpress-theme-phoenix`
+* Now in your `gatsby-config.js`, tell gatsby that you will be using this theme and put your wordpress site url.
+
+```javascript
+module.exports = {
+	plugins: [
+		// Tell gatsby which theme you will be using.
+		{
+		resolve: "gatsby-wordpress-theme-phoenix",
+		options: {
+			wordPressUrl: 'xxxxx'
+		}
+	} ]
+};
+```
 
 4. - Set Header menu as `HCMS Header Menu`
    
