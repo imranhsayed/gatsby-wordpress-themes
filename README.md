@@ -49,7 +49,7 @@ e. Install and activate [ACF WordPress plugin](https://wordpress.org/plugins/adv
    ![](demos/footer-menu-demo.png)
    
 4. You can also set text widgets in #HCMS Footer #1 and #HCMS Footer #2 under Appearance  > Widgets in WordPress.
-5. Import all the ACF data into WordPress by going to WordPress Dashboard > Custom Fields > Tools > Import
+5. Import all the ACF data from `wordpress/acf-data` json file of this repo, into WordPress by going to WordPress Dashboard > Custom Fields > Tools > Import
 6. Make sure you have a home page and 
     
 **Open the source code and start editing!**
