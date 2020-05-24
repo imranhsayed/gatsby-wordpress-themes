@@ -1,6 +1,7 @@
 import React from 'react';
 import { isEmpty } from 'lodash';
 import config from '../../../../client-config';
+import './style.scss';
 
 const LatestPosts = ( props ) => {
 
