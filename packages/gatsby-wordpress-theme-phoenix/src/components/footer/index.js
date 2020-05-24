@@ -32,8 +32,6 @@ const Footer = ( { data } ) => {
 		twitter: <TwitterIcon />,
 	};
 
-	console.warn( 'footer', data );
-
 	return (
 		<footer className="footer">
 
