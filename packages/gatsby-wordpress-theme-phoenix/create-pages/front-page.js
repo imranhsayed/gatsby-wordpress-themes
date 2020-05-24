@@ -32,6 +32,25 @@ query GET_FRONT_PAGE {
 	        }
 	        pageLinkText
 	      }
+	      searchSection {
+	        fieldGroupName
+	        searchLabel
+	        backgroundImage {
+	          id
+	          altText
+	          sourceUrl
+	          srcSet
+	          sizes
+	          mediaDetails {
+	            width
+	            height
+	          }
+	        }
+	        taxonomies {
+	          name
+	          uri
+	        }
+	      }
 	      featuredPosts {
 	        ... on hwgraphql_Post {
 	          id

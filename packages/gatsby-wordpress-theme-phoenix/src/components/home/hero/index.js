@@ -3,7 +3,7 @@ import config from '../../../../client-config';
 import { Link } from "gatsby";
 import { isEmpty } from 'lodash';
 import './style.scss';
-// import '../../../images/home/mountain-illustration.png';
+import '../../../images/home/mountain-illustration.png';
 
 const Hero = ( props ) => {
 
