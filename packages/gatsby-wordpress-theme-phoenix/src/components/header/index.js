@@ -3,7 +3,7 @@
  */
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { Link, StaticQuery, graphql } from 'gatsby';
 
 /**
  * Internal dependencies.
@@ -11,18 +11,18 @@ import { Link, graphql } from 'gatsby';
 import Nav from './nav';
 import './style.scss';
 import Image from "./image";
+import SEO from "../seo";
 
 const Header = ( { data } ) => {
-	const { header: { siteTitle, siteTagLine, siteLogoUrl }, headerMenuItems } = data;
-
-	console.warn( 'data', data );
+	const { header: { siteTitle, siteTagLine, siteLogoUrl }, headerMenuItems } = data.HWGraphQL;
 
 	return (
 		<header className="site-header-container container">
 			<div className="site-header">
 				<div className="site-brand">
-					<Link to="/" >
-						{ siteLogoUrl ? <img className="site-brand__logo" src={ siteLogoUrl } width="68" height="55" alt="header logo"/> : <Image/> }
+					<Link to="/">
+						{ siteLogoUrl ? <img className="site-brand__logo" src={ siteLogoUrl } width="68" height="55"
+						                     alt="header logo"/> : <Image/> }
 					</Link>
 					<div>
 						<h2 className="screen-reader-text site-brand__title">{ siteTitle }</h2>
@@ -41,19 +41,52 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-	siteTitle: ``,
+	siteTitle: 'Phoenix: Gatsby WordPress Theme',
 };
 
-export const query = graphql`
-    query {
-        fileName: file(relativePath: { eq: "images/logo.png" }) {
-            childImageSharp {
-                fluid(maxWidth: 400, maxHeight: 250) {
-                    ...GatsbyImageSharpFluid
-                }
-            }
-        }
-    }
-`
+export { Header };
 
-export default Header;
+export default ( props ) => {
+
+	return (
+		<StaticQuery
+			query={ graphql`
+				    query HeaderQuery {
+				        HWGraphQL {
+						    header: getHeader {
+						      siteLogoUrl
+						      siteTagLine
+						      siteTitle
+						      favicon
+						    }
+						    headerMenuItems: menuItems(where: {location: HCMS_MENU_HEADER}) {
+						      edges {
+						        node {
+						          id
+						          menuItemId
+						          label
+						          url
+						          childItems {
+						            edges {
+						              node {
+						                menuItemId
+						                label
+						                url
+						              }
+						            }
+						          }
+						        }
+						      }
+						    }
+				        }
+				    }
+				` }
+			render={ data => (
+				<>
+					<SEO title="Phoenix: Gatsby WordPress Theme" header={ data.HWGraphQL.header }/>
+					<Header data={ data }/>
+				</>
+			) }
+		/>
+	)
+}

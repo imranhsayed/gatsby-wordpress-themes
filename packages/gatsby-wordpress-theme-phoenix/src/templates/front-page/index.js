@@ -1,13 +1,12 @@
 import React from "react";
+import Layout from "../../components/layout";
 
 const FrontPage = ( props ) => {
 
-	console.warn( 'home props', props );
-
 	return (
-		<div>
+		<Layout>
 			Home
-		</div>
+		</Layout>
 	)
 };
 export default FrontPage;

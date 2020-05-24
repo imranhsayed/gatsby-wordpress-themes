@@ -1,7 +1,7 @@
 import { configure } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 
-// automatically import all files ending in *.stories.js
+// Automatically import all files ending in *.stories.js
 configure( [
 	require.context( "../src/stories", true, /\.stories\.js$/ ),
 	require.context( "../src/templates", true, /\.stories\.js$/ ),

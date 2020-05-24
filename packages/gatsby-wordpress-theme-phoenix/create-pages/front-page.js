@@ -5,31 +5,6 @@ const frontPageTemplate = require.resolve(`../src/templates/front-page/index.js`
 const GET_FRONT_PAGE = `
 query GET_FRONT_PAGE {
   HWGraphQL {
-    header: getHeader {
-      siteLogoUrl
-      siteTagLine
-      siteTitle
-      favicon
-    }
-    headerMenuItems: menuItems(where: {location: HCMS_MENU_HEADER}) {
-      edges {
-        node {
-          id
-          menuItemId
-          label
-          url
-          childItems {
-            edges {
-              node {
-                menuItemId
-                label
-                url
-              }
-            }
-          }
-        }
-      }
-    }
     footer: getFooter {
       copyrightText
       sidebarOne
