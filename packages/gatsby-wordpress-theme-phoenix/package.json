@@ -23,6 +23,7 @@
     "@babel/core": "^7.9.6",
     "@storybook/addon-actions": "^5.3.18",
     "@storybook/addon-links": "^5.3.18",
+    "@storybook/addon-viewport": "^5.3.19",
     "@storybook/addons": "^5.3.18",
     "@storybook/react": "^5.3.18",
     "babel-jest": "^26.0.1",
