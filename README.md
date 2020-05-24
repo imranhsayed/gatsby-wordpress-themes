@@ -1,4 +1,4 @@
-## 🎨 Gatsby WordPress theme
+## 🎨 Gatsby WordPress themes
 [![Project Status: WIP – Initial development is in progress.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 A Gatsby theme for WordPress, using Decoupled Architecture.
@@ -26,11 +26,11 @@ npm run build    # When ready for production.
 
 ## Usage
 
-1.Upload and activate all the plugins from wordpress/plugins folder of this repo, into your WordPress Site.
+1. Upload and activate all the plugins from wordpress/plugins folder of this repo, into your WordPress Site.
 
 OR,
 
-a.. Clone the WordPress plugin [Headless CMS](https://github.com/imranhsayed/headless-cms) in your WordPress
+a. Clone the WordPress plugin [Headless CMS](https://github.com/imranhsayed/headless-cms) in your WordPress
 plugin directory and activate it.
 
 b. Clone and activate [wp-graphql](https://github.com/wp-graphql/wp-graphql) -test on ( v0.8.3 ) in WordPress plugin directory.
@@ -49,6 +49,8 @@ e. Install and activate [ACF WordPress plugin](https://wordpress.org/plugins/adv
    ![](demos/footer-menu-demo.png)
    
 4. You can also set text widgets in #HCMS Footer #1 and #HCMS Footer #2 under Appearance  > Widgets in WordPress.
+5. Import all the ACF data into WordPress by going to WordPress Dashboard > Custom Fields > Tools > Import
+6. Make sure you have a home page and 
     
 **Open the source code and start editing!**
 
