@@ -5,35 +5,7 @@ const frontPageTemplate = require.resolve(`../src/templates/front-page/index.js`
 const GET_FRONT_PAGE = `
 query GET_FRONT_PAGE {
   HWGraphQL {
-    footer: getFooter {
-      copyrightText
-      sidebarOne
-      sidebarTwo
-      socialLinks {
-        iconUrl
-        iconName
-      }
-    }
-    footerMenuItems: menuItems(where: {location: HCMS_MENU_FOOTER}) {
-      edges {
-        node {
-          id
-          menuItemId
-          label
-          url
-          childItems {
-            edges {
-              node {
-                menuItemId
-                label
-                url
-                id
-              }
-            }
-          }
-        }
-      }
-    }
+	title
   }
 }
 `;

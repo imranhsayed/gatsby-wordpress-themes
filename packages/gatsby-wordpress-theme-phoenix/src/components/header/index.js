@@ -14,6 +14,7 @@ import Image from "./image";
 import SEO from "../seo";
 
 const Header = ( { data } ) => {
+
 	const { header: { siteTitle, siteTagLine, siteLogoUrl }, headerMenuItems } = data.HWGraphQL;
 
 	return (
@@ -44,9 +45,18 @@ Header.defaultProps = {
 	siteTitle: 'Phoenix: Gatsby WordPress Theme',
 };
 
+/**
+ *  Exporting Just the footer as well without static query for storybook,
+ *  as static query does not work in storybook
+ */
 export { Header };
 
-export default ( props ) => {
+/**
+ * Default Header Component Export.
+ *
+ * @return {*}
+ */
+export default () => {
 
 	return (
 		<StaticQuery
