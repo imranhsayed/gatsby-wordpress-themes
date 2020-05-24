@@ -6,12 +6,24 @@ const singlePageTemplate = require.resolve(`../src/templates/page/index.js`);
 const GET_PAGES = `
 query GET_PAGES {
   HWGraphQL {
-    pages {
+    pages( first: 5000 ) {
       nodes {
-        uri
         id
         title
         content
+        date
+        uri
+        featuredImage {
+          id
+          altText
+          sourceUrl
+          srcSet
+          sizes
+          mediaDetails {
+            width
+            height
+          }
+        }
       }
     }
   }

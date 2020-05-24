@@ -5,17 +5,24 @@ const singlePageTemplate = require.resolve(`../src/templates/post/index.js`);
 const GET_POSTS = `
 query GET_POSTS {
   HWGraphQL {
-    posts {
+    posts( first: 5000 ) {
       nodes {
-        uri
         id
         title
+        excerpt
         content
+        date
+        uri
         featuredImage {
+          id
           altText
           sourceUrl
           srcSet
-          id
+          sizes
+          mediaDetails {
+            width
+            height
+          }
         }
       }
     }

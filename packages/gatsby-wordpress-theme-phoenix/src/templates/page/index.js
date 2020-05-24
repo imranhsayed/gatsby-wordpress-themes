@@ -1,14 +1,13 @@
 import React from "react";
 import Layout from "../../components/layout";
+import Page from '../../components/page';
 
-const Page = ( props ) => {
-
-	console.warn( 'props', props );
+const PageTemplate = ( props ) => {
 
 	return (
 		<Layout>
-			Hello
+			<Page data={ props.pageContext }/>
 		</Layout>
 	)
 };
-export default Page;
+export default PageTemplate;
