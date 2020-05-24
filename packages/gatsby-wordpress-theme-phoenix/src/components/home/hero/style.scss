@@ -1,0 +1,39 @@
+@import "../../../sass/essentials";
+
+.hero-section {
+	margin-top: 70px;
+	align-items: center;
+	@media only screen and ( min-width: $tablet ) {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__description {
+		font-size: 24px;
+	}
+
+}
+
+.hero-left {
+	width: 392px;
+	margin-bottom: 50px;
+	margin-right: 100px;
+	@media only screen and ( max-width: 1150px ) {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.hero-right {
+	align-self: flex-end;
+	img {
+		display: block;
+		margin-bottom: -5px;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+		@media only screen and ( max-width: 1150px ) {
+			max-width: 500px;
+			width: 100%;
+		}
+	}
+}

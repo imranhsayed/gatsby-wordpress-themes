@@ -50,7 +50,8 @@ e. Install and activate [ACF WordPress plugin](https://wordpress.org/plugins/adv
    
 4. You can also set text widgets in #HCMS Footer #1 and #HCMS Footer #2 under Appearance  > Widgets in WordPress.
 5. Import all the ACF data from `wordpress/acf-data` json file of this repo, into WordPress by going to WordPress Dashboard > Custom Fields > Tools > Import
-6. Make sure you have a home page and 
+6. Make sure you have a home page and Location rule is set to Home page.
+![](demos/acf-home-screenshot.png)
     
 **Open the source code and start editing!**
 

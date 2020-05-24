@@ -13,6 +13,17 @@ query GET_FRONT_PAGE {
 	        fieldGroupName
 	        title
 	        description
+	        image {
+	            id
+	            altText
+	            sourceUrl
+	            srcSet
+	            sizes
+	            mediaDetails {
+	              width
+	              height
+	            }
+	        }
 	        pageLink {
 	          ... on hwgraphql_Page {
 	            id
