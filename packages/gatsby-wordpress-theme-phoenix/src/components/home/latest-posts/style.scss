@@ -1,0 +1,45 @@
+@import "../../../sass/essentials";
+
+.latest-posts-section {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: #f5f5f5;
+	&__wrap {
+		@media only screen and ( min-width: $tablet ) {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+}
+
+.latest-post-section {
+	background-color: $white;
+	box-shadow: 5px 5px 20px 0 #cbcbcb;
+
+	@media only screen and ( max-width: $tablet ) {
+		margin-bottom: 30px;
+	}
+
+	@media only screen and ( min-width: $tablet ) {
+		flex-basis: 32%;
+	}
+
+	&__img {
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	&__content {
+		padding: 20px;
+	}
+
+	&__title {
+		color: #333;
+		font-weight: bold;
+		font-size: 22px;
+		margin-bottom: 0;
+	}
+}

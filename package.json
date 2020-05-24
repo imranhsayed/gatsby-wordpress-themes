@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-wordpress-theme",
+  "name": "gatsby-wordpress-themes",
   "version": "1.0.0",
   "private": true,
   "description": "Gatsby WordPress Theme Project",
@@ -12,6 +12,7 @@
 	"dev": "yarn workspace site dev",
 	"build": "yarn workspace site build",
 	"start": "yarn workspace site start",
+	"storybook": "yarn workspace site storybook",
 	"clean": "yarn workspace site clean"
   },
   "repository": {

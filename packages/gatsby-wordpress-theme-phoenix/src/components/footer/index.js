@@ -3,7 +3,7 @@
  */
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Link } from "gatsby";
+import { graphql, Link, StaticQuery } from "gatsby";
 
 /**
  * Internal dependencies.
@@ -16,7 +16,7 @@ import InstagramIcon from "../icons/instagram-icon";
 import YouTubeIcon from "../icons/youtube-icon";
 
 const Footer = ( { data } ) => {
-	const { footer: { copyrightText, socialLinks, sidebarOne, sidebarTwo }, footerMenuItems } = data;
+	const { footer: { copyrightText, socialLinks, sidebarOne, sidebarTwo }, footerMenuItems } = data.HWGraphQL;
 
 	const staticSocialLink = [
 		{ iconName: 'facebook', iconUrl: 'https://facebook.com/codeytek'  },
@@ -26,14 +26,11 @@ const Footer = ( { data } ) => {
 	];
 
 	const socialLinksData = socialLinks.length ? socialLinks : staticSocialLink;
-	console.warn( 'soc', socialLinksData );
 
 	const socialIcons = {
 		facebook: <FacebookIcon />,
 		twitter: <TwitterIcon />,
 	};
-
-	console.warn( 'footer', data );
 
 	return (
 		<footer className="footer">
@@ -99,4 +96,59 @@ Footer.defaultProps = {
 	copyrightText: `Codeytek Academy ${ new Date().getFullYear() }`,
 };
 
-export default Footer;
+/**
+ *  Exporting Just the footer as well without static query for storybook,
+ *  as static query does not work in storybook
+ */
+export {
+	Footer
+};
+
+/**
+ * This is default Component Export.
+ *
+ * @return {*}
+ */
+export default () => {
+
+	return (
+		<StaticQuery
+			query={ graphql`
+				    query FooterQuery {
+				        HWGraphQL {
+						    footer: getFooter {
+						      copyrightText
+						      sidebarOne
+						      sidebarTwo
+						      socialLinks {
+						        iconUrl
+						        iconName
+						      }
+						    }
+						    footerMenuItems: menuItems(where: {location: HCMS_MENU_FOOTER}) {
+						      edges {
+						        node {
+						          id
+						          menuItemId
+						          label
+						          url
+						          childItems {
+						            edges {
+						              node {
+						                menuItemId
+						                label
+						                url
+						                id
+						              }
+						            }
+						          }
+						        }
+						      }
+						    }
+				        }
+				    }
+				` }
+			render={ data => <Footer data={ data }/> }
+		/>
+	)
+}

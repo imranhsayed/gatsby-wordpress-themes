@@ -37,7 +37,7 @@ module.exports = ({ wordPressUrl }) => ({
 				fieldName: `HWGraphQL`,
 				// Url to query from
 				url: `${wordPressUrl}/graphql`,
-				refetchInterval: 60,
+				refetchInterval: 6000,
 			},
 		}
 		// this (optional) plugin enables Progressive Web App + Offline functionality

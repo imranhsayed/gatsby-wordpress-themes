@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Layout from '../../components/layout/index';
 
 const Post = ( props ) => {
 
@@ -8,7 +9,7 @@ const Post = ( props ) => {
 	      } = props;
 
 	return (
-		<>
+		<Layout>
 			<article
 				data-id={id}
 				id={`post-${postId}`}
@@ -28,7 +29,7 @@ const Post = ( props ) => {
 				{/* .entry-content */}
 			</article>
 			{/* #post-${ID} */}
-		</>
+		</Layout>
 	)
 };
 
