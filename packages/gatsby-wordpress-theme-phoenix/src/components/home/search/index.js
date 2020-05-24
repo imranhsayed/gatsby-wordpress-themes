@@ -2,6 +2,7 @@ import React from 'react';
 import config from '../../../../client-config';
 import { Link } from 'gatsby';
 import { isEmpty } from 'lodash';
+import './style.scss';
 // import '../../../images/home/search-background.png';
 
 const Search = ( props ) => {
@@ -16,7 +17,7 @@ const Search = ( props ) => {
 
 	const taxonomyIcons = [ taxonomyIconOne, taxonomyIconTwo, taxonomyIconThree ];
 
-	console.warn( 'propsss', ! isEmpty( props.data ) );
+	console.warn( 'propsss', taxonomies );
 
 	const backgroundURL = ! isEmpty( backgroundImage )
 		? backgroundImage.sourceUrl
@@ -41,7 +42,7 @@ const Search = ( props ) => {
 				<div className="search-section__categories">
 					{ taxonomies.map( ( term, index ) => (
 						<div
-							key={ term.id }
+							key={ term.uri }
 							className="search-section__category"
 						>
 							{ ! isEmpty( taxonomyIcons[index].sourceUrl ) ? (
