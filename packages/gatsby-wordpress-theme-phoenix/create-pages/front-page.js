@@ -50,6 +50,21 @@ query GET_FRONT_PAGE {
 	          name
 	          uri
 	        }
+	        taxonomyIconOne {
+	          id
+	          altText
+	          sourceUrl
+	        }
+	        taxonomyIconTwo {
+	          id
+	          altText
+	          sourceUrl
+	        }
+	        taxonomyIconThree {
+	          id
+	          altText
+	          sourceUrl
+	        }
 	      }
 	      featuredPosts {
 	        ... on hwgraphql_Post {
