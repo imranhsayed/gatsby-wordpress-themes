@@ -66,22 +66,25 @@ query GET_FRONT_PAGE {
 	          sourceUrl
 	        }
 	      }
-	      featuredPosts {
-	        ... on hwgraphql_Post {
-	          id
-	          title
-	          excerpt
-	          date
-	          uri
-	          featuredImage {
+	      featuredPostsSection {
+	        heading
+	        featuredPosts {
+	          ... on hwgraphql_Post {
 	            id
-	            altText
-	            sourceUrl
-	            srcSet
-	            sizes
-	            mediaDetails {
-	              width
-	              height
+	            title
+	            excerpt
+	            date
+	            uri
+	            featuredImage {
+	              id
+	              altText
+	              sourceUrl
+	              srcSet
+	              sizes
+	              mediaDetails {
+	                width
+	                height
+	              }
 	            }
 	          }
 	        }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import Layout from "../components/layout";
 
 const BlogTemplate = ( props ) => {
 
@@ -8,7 +9,7 @@ const BlogTemplate = ( props ) => {
 	console.warn( 'nodes', nodes );
 
 	return (
-		<>
+		<Layout>
 			<h1>Blog</h1>
 			<div id="blog">
 				{
@@ -57,7 +58,7 @@ const BlogTemplate = ( props ) => {
 					} )
 				}
 			</div>
-		</>
+		</Layout>
 	)
 };
 
