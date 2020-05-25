@@ -40,7 +40,7 @@ const Post = ( { post } ) => {
 					''
 				) }
 				{ post.excerpt ? (
-					<p className="featured-post-section__content-paragraph" dangerouslySetInnerHTML={ { __html: post.excerpt } }/>
+					<div className="featured-post-section__excerpt" dangerouslySetInnerHTML={ { __html: post.excerpt } }/>
 				) : (
 					''
 				) }

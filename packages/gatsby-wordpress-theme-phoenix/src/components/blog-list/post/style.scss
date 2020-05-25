@@ -22,8 +22,14 @@
 		padding: 20px;
 		background: $white;
 	}
-	&__content-paragraph {
-		min-height: 48px;
+	&__excerpt {
+		min-height: 64px;
+		p {
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			overflow: hidden;
+			-webkit-box-orient: vertical;
+		}
 	}
 	&__meta {
 		display: flex;
