@@ -12,7 +12,7 @@ const Page = ( props ) => {
 		<>
 			{ ! isEmpty( data )  ? (
 				<>
-					<section className="page-content">
+					<section className="page-content wrapper">
 						{ ! isEmpty( data.title )  ? (
 							<h2>{ data.title }</h2>
 						) : (
