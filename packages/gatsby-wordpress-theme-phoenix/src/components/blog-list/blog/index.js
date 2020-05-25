@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 import Post from '../post';
+import './style.scss';
 
 const Blog = ( { pageContext } ) => {
 
@@ -10,15 +11,15 @@ const Blog = ( { pageContext } ) => {
 	const nextUrl = '/blog/' + ( index + 1 ).toString();
 
 	return (
-		<div className="blog">
+		<div className="blog wrapper">
 			<h1>Blog</h1>
 			{ group.map( ( { node } ) => (
 				<Post key={ node.id } post={ node } />
 			) ) }
 
 			<div className="blog__page-navigation">
-				{ ! first ? <Link to={ previousUrl }>Previous Page</Link> : '' }
-				{ ! last ? <Link to={ nextUrl }>Next Page</Link> : '' }
+				{ ! first ? <Link to={ previousUrl }>≪ Previous Page</Link> : '' }
+				{ ! last ? <Link to={ nextUrl }>Next Page ≫</Link> : '' }
 			</div>
 		</div>
 	)

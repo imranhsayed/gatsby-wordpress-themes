@@ -21,7 +21,7 @@ const LatestPosts = ( props ) => {
 									className="latest-post-section"
 								>
 									{ ! isEmpty( post.featuredImage ) ? (
-										<div className="featured-post-section__img">
+										<div className="latest-post-section__img">
 											<img
 												src={
 													post.featuredImage.sourceUrl
@@ -42,7 +42,7 @@ const LatestPosts = ( props ) => {
 									) }
 									<div className="latest-post-section__content">
 										{ post.excerpt ? (
-											<p className="latest-post-section__title" dangerouslySetInnerHTML={ { __html: post.excerpt } }/>
+											<div className="latest-post-section__excerpt" dangerouslySetInnerHTML={ { __html: post.excerpt } }/>
 										) : (
 											''
 										) }
