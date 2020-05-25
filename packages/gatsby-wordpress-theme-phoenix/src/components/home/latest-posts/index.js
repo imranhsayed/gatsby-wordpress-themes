@@ -1,5 +1,6 @@
 import React from 'react';
 import { isEmpty } from 'lodash';
+import { Link } from 'gatsby';
 import config from '../../../../client-config';
 import './style.scss';
 
@@ -54,6 +55,10 @@ const LatestPosts = ( props ) => {
 				) : (
 					''
 				) }
+			</div>
+
+			<div className="view-all-wrap">
+				<Link to="/blog"><button>View All</button></Link>
 			</div>
 		</div>
 	) : (

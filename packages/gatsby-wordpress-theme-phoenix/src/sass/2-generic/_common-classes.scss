@@ -71,3 +71,23 @@
 .is-font-impact {
 	font-family: $font__secondary_impact;
 }
+.view-all-wrap {
+	text-align: center;
+	padding: 36px 0 0 0;
+}
+
+button {
+	white-space: nowrap;
+	padding: 14px 20px;
+	border: 2px solid #757575;
+	border-radius: 45px;
+	text-align: center;
+	vertical-align: middle;
+	background-color: $white;
+}
+
+.button-secondary {
+	background-color: #e98f31;
+	color: $white;
+	border: none;
+}
