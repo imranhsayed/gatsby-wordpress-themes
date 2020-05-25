@@ -4,15 +4,15 @@ import Link from 'gatsby-link';
 import Post from '../post';
 import './style.scss';
 
-const Blog = ( { pageContext } ) => {
+const Blog = ( { pageContext, pageTitle } ) => {
 
-	const { group, index, first, last, pageCount } = pageContext;
-	const previousUrl = index - 1 == 1 ? '/blog' : '/blog/' + ( index - 1 ).toString()
-	const nextUrl = '/blog/' + ( index + 1 ).toString();
+	const { group, index, first, last, pageCount, pathPrefix } = pageContext;
+	const previousUrl = index - 1 == 1 ? `/${ pathPrefix }` : `/${ pathPrefix }/` + ( index - 1 ).toString()
+	const nextUrl = `/${ pathPrefix }/` + ( index + 1 ).toString();
 
 	return (
 		<div className="blog wrapper">
-			<h1>Blog</h1>
+			<h1>{ pageTitle }</h1>
 			{ group.map( ( { node } ) => (
 				<Post key={ node.id } post={ node } />
 			) ) }
