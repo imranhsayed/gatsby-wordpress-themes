@@ -7,7 +7,7 @@ const BlogTemplate = ( { pageContext } ) => {
 
 	return (
 		<Layout>
-			<Blog pageContext={ pageContext }/>
+			<Blog pageContext={ pageContext } pageTitle="Blog" />
 		</Layout>
 	)
 }
