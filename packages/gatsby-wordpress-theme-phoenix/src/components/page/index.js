@@ -31,7 +31,7 @@ const Page = ( props ) => {
 							''
 						) }
 						{ ! isEmpty( data.featuredImage ) ? (
-							<Img fluid={data.sourceUrlSharp.childImageSharp.fluid} alt={ data.altText ? data.altText : data.title } />
+							<Img fluid={data.featuredImage.sourceUrlSharp.childImageSharp.fluid} alt={ data.altText ? data.altText : data.title } />
 						) : (
 							<Img fluid={imgData.file.childImageSharp.fluid} alt="Default" />
 						) }
