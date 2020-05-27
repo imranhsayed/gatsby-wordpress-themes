@@ -1,13 +1,26 @@
 import React from 'react';
 import config from '../../../../client-config';
-import { Link } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import { isEmpty } from 'lodash';
 import './style.scss';
 import '../../../images/home/mountain-illustration.png';
+import Img from "gatsby-image";
 
 const Hero = ( props ) => {
 
-	const { title, description, image: { sourceUrl, altText }, pageLinkText, pageLink: { uri } } = props.data;
+	const { title, description, image: { sourceUrl, sourceUrlSharp, altText }, pageLinkText, pageLink: { uri } } = props.data;
+
+	const imgData = useStaticQuery(graphql`
+        query {
+            file(relativePath: {eq: "home/mountain-illustration.png"}) {
+                childImageSharp {
+                    fluid {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+        }
+	`);
 
 	return ! isEmpty( props.data ) ? (
 		<div className="hero-section wrapper">
@@ -36,9 +49,9 @@ const Hero = ( props ) => {
 			</div>
 			<div className="hero-right">
 				{ sourceUrl ? (
-					<img src={ sourceUrl } alt={ altText } />
+					<Img fluid={ sourceUrlSharp.childImageSharp.fluid } alt={ altText ? altText : 'Banner' } />
 				) : (
-					<img src={ config.heroSection.heroImgURL } alt="hero" />
+					<Img fluid={ imgData.file.childImageSharp.fluid } alt="Hero" />
 				) }
 			</div>
 		</div>

@@ -18,7 +18,7 @@ const Post = ( { post } ) => {
             }
         }
 	`);
-	
+
 	if ( isEmpty( post ) ) {
 		return null;
 	}
@@ -27,15 +27,7 @@ const Post = ( { post } ) => {
 		<div className="featured-post-section" >
 			{ ! isEmpty( post.featuredImage ) ? (
 				<div className="featured-post-section__img">
-					<img
-						src={
-							post.featuredImage.sourceUrl
-						}
-						srcSet={
-							post.featuredImage.sourceUrl.srcSet
-						}
-						alt={ post.title }
-					/>
+					<Img fluid={post.featuredImage.sourceUrlSharp.childImageSharp.fluid} alt={ post.altText ? post.altText : post.title } />
 				</div>
 			) : (
 				<div className="featured-post-section__img">
