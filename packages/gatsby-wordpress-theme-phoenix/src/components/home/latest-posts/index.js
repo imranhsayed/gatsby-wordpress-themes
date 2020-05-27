@@ -2,9 +2,13 @@ import React from 'react';
 import { isEmpty } from 'lodash';
 import { Link } from 'gatsby';
 import config from '../../../../client-config';
+import Img from 'gatsby-image';
+import { useStaticQuery, graphql } from "gatsby";
 import './style.scss';
 
 const LatestPosts = ( props ) => {
+
+	console.warn( 'pooo' );
 
 	const { data } = props;
 
@@ -35,10 +39,7 @@ const LatestPosts = ( props ) => {
 										</div>
 									) : (
 										<div className="latest-post-section__img">
-											<img
-												src={ config.defaultPostImage }
-												alt="default"
-											/>
+											{/*<Img fluid={data.fileName.childImageSharp.fluid} alt="" />*/}
 										</div>
 									) }
 									<div className="latest-post-section__content">
