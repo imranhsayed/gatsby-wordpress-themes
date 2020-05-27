@@ -1,7 +1,8 @@
-import React, { Component } from "react"
-import * as JsSearch from "js-search"
+import React, { Component } from 'react';
+import * as JsSearch from 'js-search';
 
 class ClientSearch extends Component {
+
 	state = {
 		isLoading: true,
 		searchResults: [],
@@ -9,21 +10,26 @@ class ClientSearch extends Component {
 		isError: false,
 		indexByTitle: false,
 		indexByAuthor: false,
+		indexByCategory: false,
 		termFrequency: true,
 		removeStopWords: false,
 		searchQuery: "",
 		selectedStrategy: "",
 		selectedSanitizer: "",
-	}
+	};
+
 	/**
 	 * React lifecycle method that will inject the data into the state.
 	 */
-	static getDerivedStateFromProps(nextProps, prevState) {
-		if (prevState.search === null) {
-			const { engine } = nextProps
+	static getDerivedStateFromProps( nextProps, prevState ) {
+		if ( prevState.search === null ) {
+
+			const { engine } = nextProps;
+
 			return {
 				indexByTitle: engine.TitleIndex,
 				indexByAuthor: engine.AuthorIndex,
+				indexByCategory: engine.CategoryIndex,
 				termFrequency: engine.SearchByTerm,
 				selectedSanitizer: engine.searchSanitizer,
 				selectedStrategy: engine.indexStrategy,
@@ -31,6 +37,7 @@ class ClientSearch extends Component {
 		}
 		return null
 	}
+
 	async componentDidMount() {
 		this.rebuildIndex()
 	}
@@ -46,172 +53,180 @@ class ClientSearch extends Component {
 			      termFrequency,
 			      indexByTitle,
 			      indexByAuthor,
-		      } = this.state
-		const { books } = this.props
+			      indexByCategory,
+		      } = this.state;
 
-		const dataToSearch = new JsSearch.Search("id")
+		const { books } = this.props;
 
-		if (removeStopWords) {
+		const dataToSearch = new JsSearch.Search( 'id' );
+
+		if ( removeStopWords ) {
 			dataToSearch.tokenizer = new JsSearch.StopWordsTokenizer(
 				dataToSearch.tokenizer
 			)
 		}
+
 		/**
-		 * defines an indexing strategy for the data
+		 * Defines an indexing strategy for the data
 		 * read more about it here https://github.com/bvaughn/js-search#configuring-the-index-strategy
 		 */
-		if (selectedStrategy === "All") {
+		if ( selectedStrategy === "All" ) {
 			dataToSearch.indexStrategy = new JsSearch.AllSubstringsIndexStrategy()
 		}
-		if (selectedStrategy === "Exact match") {
+		if ( selectedStrategy === "Exact match" ) {
 			dataToSearch.indexStrategy = new JsSearch.ExactWordIndexStrategy()
 		}
-		if (selectedStrategy === "Prefix match") {
+		if ( selectedStrategy === "Prefix match" ) {
 			dataToSearch.indexStrategy = new JsSearch.PrefixIndexStrategy()
 		}
 
 		/**
-		 * defines the sanitizer for the search
+		 * Defines the sanitizer for the search
 		 * to prevent some of the words from being excluded
 		 */
 		selectedSanitizer === "Case Sensitive"
-			? (dataToSearch.sanitizer = new JsSearch.CaseSensitiveSanitizer())
-			: (dataToSearch.sanitizer = new JsSearch.LowerCaseSanitizer())
+			? ( dataToSearch.sanitizer = new JsSearch.CaseSensitiveSanitizer() )
+			: ( dataToSearch.sanitizer = new JsSearch.LowerCaseSanitizer() )
 		termFrequency === true
-			? (dataToSearch.searchIndex = new JsSearch.TfIdfSearchIndex("id"))
-			: (dataToSearch.searchIndex = new JsSearch.UnorderedSearchIndex())
+			? ( dataToSearch.searchIndex = new JsSearch.TfIdfSearchIndex( "id" ) )
+			: ( dataToSearch.searchIndex = new JsSearch.UnorderedSearchIndex() )
 
 		// sets the index attribute for the data
-		if (indexByTitle) {
-			dataToSearch.addIndex("title")
+		if ( indexByTitle ) {
+			dataToSearch.addIndex( "title" )
 		}
 		// sets the index attribute for the data
-		if (indexByAuthor) {
-			dataToSearch.addIndex("author")
+		if ( indexByAuthor ) {
+			dataToSearch.addIndex( ['author', 'name'] );
 		}
 
-		dataToSearch.addDocuments(books) // adds the data to be searched
+		if ( indexByCategory ) {
+			dataToSearch.addIndex( 'categoriesData' );
+		}
 
-		this.setState({ search: dataToSearch, isLoading: false })
+		dataToSearch.addDocuments( books ) // adds the data to be searched
+
+		this.setState( { search: dataToSearch, isLoading: false } )
 	}
 	/**
 	 * handles the input change and perform a search with js-search
 	 * in which the results will be added to the state
 	 */
-	searchData = e => {
-		const { search } = this.state
-		const queryResult = search.search(e.target.value)
-		this.setState({ searchQuery: e.target.value, searchResults: queryResult })
+	searchData   = e => {
+		const { search }  = this.state
+		const queryResult = search.search( e.target.value )
+		this.setState( { searchQuery: e.target.value, searchResults: queryResult } )
 	}
 	handleSubmit = e => {
 		e.preventDefault()
 	}
+
 	render() {
 
 		const { searchResults, searchQuery } = this.state;
-		const { books } = this.props;
-
+		const { books }                      = this.props;
 
 		const queryResults = searchQuery === "" ? books : searchResults;
 		return (
 			<div>
-				<div style={{ margin: "0 auto" }}>
-					<form onSubmit={this.handleSubmit}>
-						<div style={{ margin: "0 auto" }}>
-							<label htmlFor="Search" style={{ paddingRight: "10px" }}>
+				<div style={ { margin: "0 auto" } }>
+					<form onSubmit={ this.handleSubmit }>
+						<div style={ { margin: "0 auto" } }>
+							<label htmlFor="Search" style={ { paddingRight: "10px" } }>
 								Enter your search here
 							</label>
 							<input
 								id="Search"
-								value={searchQuery}
-								onChange={this.searchData}
+								value={ searchQuery }
+								onChange={ this.searchData }
 								placeholder="Enter your search here"
-								style={{ margin: "0 auto", width: "400px" }}
+								style={ { margin: "0 auto", width: "400px" } }
 							/>
 						</div>
 					</form>
 					<div>
 						Number of items:
-						{queryResults.length}
+						{ queryResults.length }
 						<table
-							style={{
+							style={ {
 								width: "100%",
 								borderCollapse: "collapse",
 								borderRadius: "4px",
 								border: "1px solid #d3d3d3",
-							}}
+							} }
 						>
-							<thead style={{ border: "1px solid #808080" }}>
+							<thead style={ { border: "1px solid #808080" } }>
 							<tr>
 								<th
-									style={{
+									style={ {
 										textAlign: "left",
 										padding: "5px",
 										fontSize: "14px",
 										fontWeight: 600,
 										borderBottom: "2px solid #d3d3d3",
 										cursor: "pointer",
-									}}
+									} }
 								>
 									Book ISBN
 								</th>
 								<th
-									style={{
+									style={ {
 										textAlign: "left",
 										padding: "5px",
 										fontSize: "14px",
 										fontWeight: 600,
 										borderBottom: "2px solid #d3d3d3",
 										cursor: "pointer",
-									}}
+									} }
 								>
 									Book Title
 								</th>
 								<th
-									style={{
+									style={ {
 										textAlign: "left",
 										padding: "5px",
 										fontSize: "14px",
 										fontWeight: 600,
 										borderBottom: "2px solid #d3d3d3",
 										cursor: "pointer",
-									}}
+									} }
 								>
 									Book Author
 								</th>
 							</tr>
 							</thead>
 							<tbody>
-							{queryResults.map(item => {
+							{ queryResults.map( item => {
 								return (
-									<tr key={`row_${item.id}`}>
+									<tr key={ `row_${ item.id }` }>
 										<td
-											style={{
+											style={ {
 												fontSize: "14px",
 												border: "1px solid #d3d3d3",
-											}}
+											} }
 										>
-											{item.id}
+											{ item.id }
 										</td>
 										<td
-											style={{
+											style={ {
 												fontSize: "14px",
 												border: "1px solid #d3d3d3",
-											}}
+											} }
 										>
-											{item.title}
+											{ item.title }
 										</td>
 										<td
-											style={{
+											style={ {
 												fontSize: "14px",
 												border: "1px solid #d3d3d3",
-											}}
+											} }
 										>
-											{item.author}
+											{ item.author.name }
+											{ item.categoriesData.map( item => <span>, { item }</span> ) }
 										</td>
 									</tr>
 								)
-							})}
+							} ) }
 							</tbody>
 						</table>
 					</div>
@@ -220,4 +235,5 @@ class ClientSearch extends Component {
 		)
 	}
 }
+
 export default ClientSearch

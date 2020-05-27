@@ -120,6 +120,16 @@ query GET_FRONT_PAGE {
 	        content
 	        date
 	        uri
+	        author {
+	          name
+	        }
+	        categories {
+	          edges {
+	            node {
+	              name
+	            }
+	          }
+	        }
 	        featuredImage {
 	          id
 	          altText
@@ -149,7 +159,23 @@ module.exports = async ( { actions, graphql } ) => {
 			.then( ( { data } ) => {
 
 				const { HWGraphQL: { pageBy, posts, allPosts } } = data;
-				return { page: pageBy, posts: posts.nodes, allPosts: allPosts.nodes };
+
+				let allThePosts = [];
+				allPosts.nodes && allPosts.nodes.map( post => {
+
+					// Push the categories data in form of an array, to make it searchable
+					let postData = post;
+					postData.categoriesData = [];
+
+					postData.categories.edges.map( category => {
+						postData.categoriesData.push( category.node.name );
+					} );
+
+					allThePosts.push( postData );
+
+				} );
+
+				return { page: pageBy, posts: posts.nodes, allPosts: allThePosts };
 			} );
 	};
 
@@ -169,6 +195,7 @@ module.exports = async ( { actions, graphql } ) => {
 						searchSanitizer: `Lower Case`,
 						TitleIndex: true,
 						AuthorIndex: true,
+						CategoryIndex: true,
 						SearchByTerm: true,
 					},
 				},
