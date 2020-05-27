@@ -8445,10 +8445,10 @@ gatsby-graphiql-explorer@^0.4.1:
   dependencies:
     "@babel/runtime" "^7.9.6"
 
-gatsby-image@^2.4.3:
-  version "2.4.3"
-  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.4.3.tgz#7fbc957382bfab39ab0e7b9e12c063cea6c0d4c6"
-  integrity sha512-CosuTTnGJ6iw04YwT9AvGo4b1AcAajDNviCj/4zh8j4R8sWOtmEXxFOCRwyq9cGoquDikVY9jRby2KUe0QPKeA==
+gatsby-image@^2.4.5:
+  version "2.4.5"
+  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.4.5.tgz#c14f549a224a0306e20c1b39f3f6fef41b0918f6"
+  integrity sha512-XqSUEJX42ufWuce8JXaDRYKxpFBUqVoNRhG2lGABUenwUqLc2UAYebb5xXUQ7HZJciGi5HdoJtWuZOy5NzphsA==
   dependencies:
     "@babel/runtime" "^7.9.6"
     object-fit-images "^3.2.4"
@@ -11318,6 +11318,11 @@ js-base64@^2.1.8:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.5.2.tgz#313b6274dda718f714d00b3330bbae6e38e90209"
   integrity sha512-Vg8czh0Q7sFBSUMWWArX/miJeBWYBPpdU/3M/DKSaekLMqrqVPaedp+5mZhie/r0lgrcaYBfwXatEew6gwgiQQ==
+
+js-search@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/js-search/-/js-search-2.0.0.tgz#84dc9d44e34ca0870d067e04b86d8038b77edc26"
+  integrity sha512-lJ8KzjlwcelIWuAdKyzsXv45W6OIwRpayzc7XmU8mzgWadg5UVOKVmnq/tXudddEB9Ceic3tVaGu6QOK/eebhg==
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
