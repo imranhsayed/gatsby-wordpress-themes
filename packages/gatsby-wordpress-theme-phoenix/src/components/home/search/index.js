@@ -3,7 +3,7 @@ import config from '../../../../client-config';
 import { Link } from 'gatsby';
 import { isEmpty } from 'lodash';
 import './style.scss';
-import ClientSearch from "../../client-search";
+import ClientSearch from "../client-search";
 // import '../../../images/home/search-background.png';
 
 const Search = ( props ) => {

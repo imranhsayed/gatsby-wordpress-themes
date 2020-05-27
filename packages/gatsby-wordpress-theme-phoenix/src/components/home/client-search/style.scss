@@ -1,4 +1,4 @@
-@import "../../sass/essentials";
+@import "../../../sass/essentials";
 
 .search-form {
 	width: 100%;
@@ -6,6 +6,20 @@
 	margin-bottom: 100px;
 	padding-left: 10px;
 	padding-right: 10px;
+
+	.search-results {
+		padding-top: 36px;
+		color: $white;
+
+		li {
+			padding: 4px 0;
+		}
+
+		a:hover {
+			opacity: 0.3;
+			transition: 0.3s;
+		}
+	}
 
 	.search-input {
 		width: 100%;

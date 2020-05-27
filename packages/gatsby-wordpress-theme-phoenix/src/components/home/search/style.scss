@@ -5,7 +5,7 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	min-height: 490px;
+	//min-height: 490px;
 
 	&__category {
 		padding-left: 10px;
@@ -15,11 +15,17 @@
 			margin-top: 20px;
 			display: block;
 		}
+
+		a:hover {
+			opacity: 0.3;
+			transition: 0.3s;
+		}
 	}
 
 	&__categories {
 		display: flex;
 		text-align: center;
+		padding-top: 84px;
 	}
 
 	&__category-icon {

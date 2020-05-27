@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import * as JsSearch from 'js-search';
 import './style.scss';
+import SearchResults from "../search-results";
 
 class ClientSearch extends Component {
 
@@ -127,7 +128,7 @@ class ClientSearch extends Component {
 		const { searchResults, searchQuery } = this.state;
 		const { posts, placeholder } = this.props;
 
-		const queryResults = searchQuery === "" ? posts : searchResults;
+		const queryResults = searchResults;
 
 		return (
 			<>
@@ -142,6 +143,7 @@ class ClientSearch extends Component {
 							onChange={ this.searchData }
 							placeholder={ placeholder }
 						/>
+					<SearchResults queryResults={ queryResults }/>
 				</form>
 			</>
 		)
