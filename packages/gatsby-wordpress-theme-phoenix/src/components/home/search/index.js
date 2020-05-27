@@ -3,17 +3,22 @@ import config from '../../../../client-config';
 import { Link } from 'gatsby';
 import { isEmpty } from 'lodash';
 import './style.scss';
+import ClientSearch from "../../client-search";
 // import '../../../images/home/search-background.png';
 
 const Search = ( props ) => {
 	const {
-		backgroundImage,
-		      searchLabel,
-		      taxonomies,
-		      taxonomyIconOne,
-		      taxonomyIconTwo,
-		      taxonomyIconThree,
-	} = props.data;
+		data: {
+			backgroundImage,
+			searchLabel,
+			taxonomies,
+			taxonomyIconOne,
+			taxonomyIconTwo,
+			taxonomyIconThree,
+		},
+		posts,
+		engine
+	} = props;
 
 	const taxonomyIcons = [ taxonomyIconOne, taxonomyIconTwo, taxonomyIconThree ];
 
@@ -33,9 +38,7 @@ const Search = ( props ) => {
 				backgroundPosition: 'center',
 			} }
 		>
-			<form>
-				<input type="search" placeholder={ placeholderText } />
-			</form>
+
 			{ ! isEmpty( taxonomies ) ? (
 				<div className="search-section__categories">
 					{ taxonomies.map( ( term, index ) => (
@@ -73,6 +76,10 @@ const Search = ( props ) => {
 			) : (
 				''
 			) }
+
+			{/* Search */}
+			<ClientSearch posts={ posts } engine={ engine } placeholder={ placeholderText }/>
+
 		</div>
 	) : (
 		''

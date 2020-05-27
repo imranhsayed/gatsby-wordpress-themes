@@ -6,7 +6,6 @@ import FeaturedPosts from "../../components/home/feature-posts";
 import LatestPosts from '../../components/home/latest-posts';
 import Error from "../../components/error";
 import { isEmpty } from 'lodash';
-import ClientSearch from "../../components/client-search";
 
 const FrontPage = ( props ) => {
 
@@ -24,9 +23,8 @@ const FrontPage = ( props ) => {
 			{
 				! isEmpty( props.pageContext ) ? (
 					<>
-						<Hero data={ banner } />
-						<Search data={ searchSection }/>
-						<ClientSearch posts={ allPosts } engine={options}/>
+						<Hero data={ banner }/>
+						<Search data={ searchSection } posts={ allPosts } engine={ options }/>
 						<FeaturedPosts data={ featuredPostsSection }/>
 						<LatestPosts data={ posts }/>
 					</>

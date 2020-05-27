@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import * as JsSearch from 'js-search';
+import './style.scss';
 
 class ClientSearch extends Component {
 
@@ -124,114 +125,25 @@ class ClientSearch extends Component {
 	render() {
 
 		const { searchResults, searchQuery } = this.state;
-		const { posts }                      = this.props;
+		const { posts, placeholder } = this.props;
 
 		const queryResults = searchQuery === "" ? posts : searchResults;
+
 		return (
-			<div>
-				<div>
-					<form onSubmit={ this.handleSubmit }>
-						<div style={ { margin: "0 auto" } }>
-							<label htmlFor="Search" style={ { paddingRight: "10px" } }>
-								Enter your search here
-							</label>
-							<input
-								id="Search"
-								value={ searchQuery }
-								onChange={ this.searchData }
-								placeholder="Enter your search here"
-								style={ { margin: "0 auto", width: "400px" } }
-							/>
-						</div>
-					</form>
-					<div>
-						Number of items:
-						{ queryResults.length }
-						<table
-							style={ {
-								width: "100%",
-								borderCollapse: "collapse",
-								borderRadius: "4px",
-								border: "1px solid #d3d3d3",
-							} }
-						>
-							<thead style={ { border: "1px solid #808080" } }>
-							<tr>
-								<th
-									style={ {
-										textAlign: "left",
-										padding: "5px",
-										fontSize: "14px",
-										fontWeight: 600,
-										borderBottom: "2px solid #d3d3d3",
-										cursor: "pointer",
-									} }
-								>
-									Post ISBN
-								</th>
-								<th
-									style={ {
-										textAlign: "left",
-										padding: "5px",
-										fontSize: "14px",
-										fontWeight: 600,
-										borderBottom: "2px solid #d3d3d3",
-										cursor: "pointer",
-									} }
-								>
-									Post Title
-								</th>
-								<th
-									style={ {
-										textAlign: "left",
-										padding: "5px",
-										fontSize: "14px",
-										fontWeight: 600,
-										borderBottom: "2px solid #d3d3d3",
-										cursor: "pointer",
-									} }
-								>
-									Post Author
-								</th>
-							</tr>
-							</thead>
-							<tbody>
-							{ queryResults.map( item => {
-								return (
-									<tr key={ `row_${ item.id }` }>
-										<td
-											style={ {
-												fontSize: "14px",
-												border: "1px solid #d3d3d3",
-											} }
-										>
-											{ item.id }
-										</td>
-										<td
-											style={ {
-												fontSize: "14px",
-												border: "1px solid #d3d3d3",
-											} }
-										>
-											{ item.title }
-										</td>
-										<td
-											style={ {
-												fontSize: "14px",
-												border: "1px solid #d3d3d3",
-											} }
-										>
-											{ item.author.name }
-											{ item.categoriesData.map( item => <span>, { item }</span> ) }
-										</td>
-									</tr>
-								)
-							} ) }
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
+			<>
+				<form className="search-form" onSubmit={ this.handleSubmit } style={ { paddingTop: '36px' } }>
+						<label htmlFor="Search" className="screen-reader-text">
+							Enter your search here
+						</label>
+						<input
+							id="Search"
+							className="search-input"
+							value={ searchQuery }
+							onChange={ this.searchData }
+							placeholder={ placeholder }
+						/>
+				</form>
+			</>
 		)
 	}
 }
