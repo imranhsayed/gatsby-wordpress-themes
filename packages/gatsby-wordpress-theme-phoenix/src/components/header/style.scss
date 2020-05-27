@@ -85,6 +85,10 @@
 			}
 		}
 
+		.header-nav__toggle-menu-btn {
+			padding-left: 3px;
+		}
+
 		&.menu-has-children .header-nav__toggle-menu-btn::after {
 			content: "+";
 			position: absolute;
