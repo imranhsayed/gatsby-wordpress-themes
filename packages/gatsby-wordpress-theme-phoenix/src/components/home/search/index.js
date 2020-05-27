@@ -17,8 +17,6 @@ const Search = ( props ) => {
 
 	const taxonomyIcons = [ taxonomyIconOne, taxonomyIconTwo, taxonomyIconThree ];
 
-	console.warn( 'propsss', taxonomies );
-
 	const backgroundURL = ! isEmpty( backgroundImage )
 		? backgroundImage.sourceUrl
 		: config.searchSection.searchBackURL;

@@ -16,7 +16,7 @@ Backend in WordPress.
 * Navigate into site’s directory.
 
 ```shell
-npm install      # Run this for the first time.
+yarn install      # Run this for the first time.
 npm run dev      # During development.
 npm run build    # When ready for production.
 ```

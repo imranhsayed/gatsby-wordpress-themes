@@ -5,15 +5,15 @@
   "description": "Gatsby WordPress Theme Project",
   "main": "index.js",
   "workspaces": [
-	"site",
-	"packages/*"
+    "site",
+    "packages/*"
   ],
   "scripts": {
-	"dev": "yarn workspace site dev",
-	"build": "yarn workspace site build",
-	"start": "yarn workspace site start",
-	"storybook": "yarn workspace site storybook",
-	"clean": "yarn workspace site clean"
+    "dev": "yarn workspace site dev",
+    "build": "yarn workspace site build",
+    "start": "yarn workspace site start",
+    "storybook": "yarn workspace site storybook",
+    "clean": "yarn workspace site clean"
   },
   "repository": {
     "type": "git",

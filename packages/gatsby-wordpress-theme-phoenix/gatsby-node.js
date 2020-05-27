@@ -18,7 +18,7 @@ exports.createPages = async ( { actions, graphql } ) => {
  * Since the node_modules ( packages ) live outside the theme directory, making an alias for them.
  *
  * So Gutenberg styles can be accessed like so `@import "~@wordpress/base-styles/colors"`
- * 
+ *
  * @param stage
  * @param actions
  */

@@ -76,8 +76,6 @@ module.exports = async ( { actions, graphql } ) => {
 		categories &&
 		categories.map( ( category ) => {
 
-			console.warn( 'hey', slash( category.node.uri )  );
-
 			/**
 			 * Create Archive Pages with Pagination.
 			 * This will create a each paginaion page in this loop at different URLs ( category.node.uri ) e.g. /category/adventure/

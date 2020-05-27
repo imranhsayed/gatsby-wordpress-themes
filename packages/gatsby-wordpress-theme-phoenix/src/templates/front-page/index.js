@@ -6,15 +6,17 @@ import FeaturedPosts from "../../components/home/feature-posts";
 import LatestPosts from '../../components/home/latest-posts';
 import Error from "../../components/error";
 import { isEmpty } from 'lodash';
+import ClientSearch from "../../components/client-search";
 
 const FrontPage = ( props ) => {
 
 	const {
-		pageContext: {
-			page: { title, frontPageMeta: { banner, searchSection, featuredPostsSection } },
-			posts
-		}
-	} = props;
+		      pageContext: {
+			      page: { title, frontPageMeta: { banner, searchSection, featuredPostsSection } },
+			      posts,
+			      bookData: { allPosts, options }
+		      }
+	      } = props;
 
 
 	return (
@@ -24,6 +26,7 @@ const FrontPage = ( props ) => {
 					<>
 						<Hero data={ banner } />
 						<Search data={ searchSection }/>
+						<ClientSearch books={ allPosts } engine={options}/>
 						<FeaturedPosts data={ featuredPostsSection }/>
 						<LatestPosts data={ posts }/>
 					</>
@@ -35,3 +38,4 @@ const FrontPage = ( props ) => {
 	)
 };
 export default FrontPage;
+

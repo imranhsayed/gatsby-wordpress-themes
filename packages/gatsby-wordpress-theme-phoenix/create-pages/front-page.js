@@ -111,6 +111,29 @@ query GET_FRONT_PAGE {
 	      }
 	    }
 	  }
+	  
+	  allPosts: posts( first: 5000 ) {
+	      nodes {
+	        id
+	        title
+	        excerpt
+	        content
+	        date
+	        uri
+	        featuredImage {
+	          id
+	          altText
+	          sourceUrl
+	          srcSet
+	          sizes
+	          mediaDetails {
+	            width
+	            height
+	          }
+	        }
+	      }
+	    }
+	  
   }
 }
 `;
@@ -125,20 +148,34 @@ module.exports = async ( { actions, graphql } ) => {
 		return await graphql( GET_FRONT_PAGE )
 			.then( ( { data } ) => {
 
-				const { HWGraphQL: { pageBy, posts } } = data;
-				return { page: pageBy, posts: posts.nodes };
+				const { HWGraphQL: { pageBy, posts, allPosts } } = data;
+				return { page: pageBy, posts: posts.nodes, allPosts: allPosts.nodes };
 			} );
 	};
 
 	// When the above fetchPosts is resolved, then create page and pass the data as pageContext to the page template.
-	await fetchPosts().then( ( { page, posts } ) => {
+	await fetchPosts().then( ( { page, posts, allPosts } ) => {
 
 		createPage( {
 			path: `/`,
 			component: slash( frontPageTemplate ),
-			context: { page, posts },
+			context: {
+				page,
+				posts,
+				bookData: {
+					allPosts: allPosts,
+					options: {
+						indexStrategy: `Prefix match`,
+						searchSanitizer: `Lower Case`,
+						TitleIndex: true,
+						AuthorIndex: true,
+						SearchByTerm: true,
+					},
+				},
+			},
 		} );
 
 	} )
 
 };
+
