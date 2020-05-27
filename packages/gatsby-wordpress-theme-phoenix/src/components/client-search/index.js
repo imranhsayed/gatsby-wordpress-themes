@@ -56,7 +56,7 @@ class ClientSearch extends Component {
 			      indexByCategory,
 		      } = this.state;
 
-		const { books } = this.props;
+		const { posts } = this.props;
 
 		const dataToSearch = new JsSearch.Search( 'id' );
 
@@ -104,7 +104,7 @@ class ClientSearch extends Component {
 			dataToSearch.addIndex( 'categoriesData' );
 		}
 
-		dataToSearch.addDocuments( books ) // adds the data to be searched
+		dataToSearch.addDocuments( posts ) // adds the data to be searched
 
 		this.setState( { search: dataToSearch, isLoading: false } )
 	}
@@ -124,12 +124,12 @@ class ClientSearch extends Component {
 	render() {
 
 		const { searchResults, searchQuery } = this.state;
-		const { books }                      = this.props;
+		const { posts }                      = this.props;
 
-		const queryResults = searchQuery === "" ? books : searchResults;
+		const queryResults = searchQuery === "" ? posts : searchResults;
 		return (
 			<div>
-				<div style={ { margin: "0 auto" } }>
+				<div>
 					<form onSubmit={ this.handleSubmit }>
 						<div style={ { margin: "0 auto" } }>
 							<label htmlFor="Search" style={ { paddingRight: "10px" } }>
@@ -167,7 +167,7 @@ class ClientSearch extends Component {
 										cursor: "pointer",
 									} }
 								>
-									Book ISBN
+									Post ISBN
 								</th>
 								<th
 									style={ {
@@ -179,7 +179,7 @@ class ClientSearch extends Component {
 										cursor: "pointer",
 									} }
 								>
-									Book Title
+									Post Title
 								</th>
 								<th
 									style={ {
@@ -191,7 +191,7 @@ class ClientSearch extends Component {
 										cursor: "pointer",
 									} }
 								>
-									Book Author
+									Post Author
 								</th>
 							</tr>
 							</thead>

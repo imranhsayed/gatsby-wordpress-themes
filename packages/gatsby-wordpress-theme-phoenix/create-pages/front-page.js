@@ -188,7 +188,7 @@ module.exports = async ( { actions, graphql } ) => {
 			context: {
 				page,
 				posts,
-				bookData: {
+				postSearchData: {
 					allPosts: allPosts,
 					options: {
 						indexStrategy: `Prefix match`,

@@ -14,7 +14,7 @@ const FrontPage = ( props ) => {
 		      pageContext: {
 			      page: { title, frontPageMeta: { banner, searchSection, featuredPostsSection } },
 			      posts,
-			      bookData: { allPosts, options }
+			      postSearchData: { allPosts, options }
 		      }
 	      } = props;
 
@@ -26,7 +26,7 @@ const FrontPage = ( props ) => {
 					<>
 						<Hero data={ banner } />
 						<Search data={ searchSection }/>
-						<ClientSearch books={ allPosts } engine={options}/>
+						<ClientSearch posts={ allPosts } engine={options}/>
 						<FeaturedPosts data={ featuredPostsSection }/>
 						<LatestPosts data={ posts }/>
 					</>
