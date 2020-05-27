@@ -8484,6 +8484,11 @@ gatsby-paginate@^1.1.1:
   dependencies:
     path "^0.12.7"
 
+gatsby-plugin-graphql-image@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-graphql-image/-/gatsby-plugin-graphql-image-1.0.1.tgz#29632a854d87e4f6a6669c007bd4ef651a228faa"
+  integrity sha512-9MsOtI2hfqUAFfyxpiftIvMBU9OW0t+f1i1k+XfNt8wv9gclq57xVQONdV1LAXqasIJ9yQh48m77FWL7g0uPhQ==
+
 gatsby-plugin-manifest@^2.4.3:
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.4.3.tgz#7d6e25609a59ba2ae8abc9881fa8abbc44e44d79"

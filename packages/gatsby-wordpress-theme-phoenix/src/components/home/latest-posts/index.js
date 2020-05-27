@@ -8,7 +8,19 @@ import './style.scss';
 
 const LatestPosts = ( props ) => {
 
-	console.warn( 'pooo' );
+	const imgData = useStaticQuery(graphql`
+        query {
+            file(relativePath: {eq: "default/default.jpg"}) {
+                childImageSharp {
+                    fluid {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+        }
+	`);
+
+	console.warn( 'imgDat', imgData );
 
 	const { data } = props;
 
@@ -39,7 +51,7 @@ const LatestPosts = ( props ) => {
 										</div>
 									) : (
 										<div className="latest-post-section__img">
-											{/*<Img fluid={data.fileName.childImageSharp.fluid} alt="" />*/}
+											<Img fluid={imgData.file.childImageSharp.fluid} alt="Default" />
 										</div>
 									) }
 									<div className="latest-post-section__content">
