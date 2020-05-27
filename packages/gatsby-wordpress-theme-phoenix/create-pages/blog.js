@@ -16,17 +16,21 @@ query GET_POSTS {
 	        date
 	        uri
 	        slug
-	        featuredImage {
-	          id
-	          altText
-	          sourceUrl
-	          srcSet
-	          sizes
-	          mediaDetails {
-	            width
-	            height
+			featuredImage {
+				altText
+				sourceUrl
+	            sourceUrlSharp {
+	              childImageSharp {
+	                fluid {
+	                  base64
+	                  aspectRatio
+	                  src
+	                  srcSet
+	                  sizes
+	                }
+	              }
+	            }
 	          }
-	        }
 	      }
 	    }
 	  }

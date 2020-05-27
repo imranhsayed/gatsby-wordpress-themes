@@ -2,9 +2,25 @@ import React from 'react';
 import { isEmpty } from 'lodash';
 import { Link } from 'gatsby';
 import config from '../../../../client-config';
+import Img from 'gatsby-image';
+import { useStaticQuery, graphql } from "gatsby";
 import './style.scss';
 
 const LatestPosts = ( props ) => {
+
+	const imgData = useStaticQuery(graphql`
+        query {
+            file(relativePath: {eq: "default/default.jpg"}) {
+                childImageSharp {
+                    fluid {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+        }
+	`);
+
+	console.warn( 'imgDat', imgData );
 
 	const { data } = props;
 
@@ -23,22 +39,11 @@ const LatestPosts = ( props ) => {
 								>
 									{ ! isEmpty( post.featuredImage ) ? (
 										<div className="latest-post-section__img">
-											<img
-												src={
-													post.featuredImage.sourceUrl
-												}
-												srcSet={
-													post.featuredImage.sourceUrl.srcSet
-												}
-												alt={ post.title }
-											/>
+											<Img fluid={post.featuredImage.sourceUrlSharp.childImageSharp.fluid} alt={ post.altText ? post.altText : post.title } />
 										</div>
 									) : (
 										<div className="latest-post-section__img">
-											<img
-												src={ config.defaultPostImage }
-												alt="default"
-											/>
+											<Img fluid={imgData.file.childImageSharp.fluid} alt="Default" />
 										</div>
 									) }
 									<div className="latest-post-section__content">

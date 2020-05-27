@@ -17,12 +17,17 @@ query GET_FRONT_PAGE {
 	            id
 	            altText
 	            sourceUrl
-	            srcSet
-	            sizes
-	            mediaDetails {
-	              width
-	              height
+	            sourceUrlSharp {
+	              childImageSharp {
+	                fluid {
+	                  base64
+	                  aspectRatio
+	                  src
+	                  srcSet
+	                  sizes
+	               }
 	            }
+	          }
 	        }
 	        pageLink {
 	          ... on hwgraphql_Page {
@@ -75,17 +80,21 @@ query GET_FRONT_PAGE {
 	            excerpt
 	            date
 	            uri
-	            featuredImage {
-	              id
-	              altText
-	              sourceUrl
-	              srcSet
-	              sizes
-	              mediaDetails {
-	                width
-	                height
-	              }
-	            }
+				featuredImage {
+					altText
+					sourceUrl
+		            sourceUrlSharp {
+		              childImageSharp {
+		                fluid {
+		                  base64
+		                  aspectRatio
+		                  src
+		                  srcSet
+		                  sizes
+		               }
+		            }
+		          }
+		        }
 	          }
 	        }
 	      }
@@ -98,17 +107,21 @@ query GET_FRONT_PAGE {
 	      excerpt
 	      date
 	      uri
-	      featuredImage {
-	        id
-	        altText
-	        sourceUrl
-	        srcSet
-	        sizes
-	        mediaDetails {
-	          width
-	          height
-	        }
-	      }
+		  featuredImage {
+			altText
+			sourceUrl
+            sourceUrlSharp {
+              childImageSharp {
+                fluid {
+                  base64
+                  aspectRatio
+                  src
+                  srcSet
+                  sizes
+                }
+              }
+            }
+          }
 	    }
 	  }
 	  
@@ -130,16 +143,20 @@ query GET_FRONT_PAGE {
 	            }
 	          }
 	        }
-	        featuredImage {
-	          id
-	          altText
-	          sourceUrl
-	          srcSet
-	          sizes
-	          mediaDetails {
-	            width
-	            height
-	          }
+			featuredImage {
+				altText
+				sourceUrl
+	            sourceUrlSharp {
+	              childImageSharp {
+	                fluid {
+	                  base64
+	                  aspectRatio
+	                  src
+	                  srcSet
+	                  sizes
+	                }
+	              }
+	            }
 	        }
 	      }
 	    }

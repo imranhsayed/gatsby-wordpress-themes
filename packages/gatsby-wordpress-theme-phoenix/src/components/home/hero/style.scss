@@ -3,37 +3,53 @@
 .hero-section {
 	margin-top: 70px;
 	align-items: center;
+
 	@media only screen and ( min-width: $tablet ) {
 		display: flex;
 		justify-content: space-between;
+		margin-top: 0;
 	}
 	&__description {
-		font-size: 24px;
+		font-size: 18px;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		overflow: hidden;
+		-webkit-box-orient: vertical;
+
+		@media only screen and ( min-width: $tablet ) {
+			font-size: 24px;
+		}
 	}
 
 }
 
 .hero-left {
-	width: 392px;
 	margin-bottom: 50px;
-	margin-right: 100px;
-	@media only screen and ( max-width: 1150px ) {
-		margin-left: auto;
-		margin-right: auto;
+	margin-right: 50px;
+	@media only screen and ( min-width: $tablet ) {
+		//margin-left: auto;
+		//margin-right: auto;
+		margin-right: 100px;
+		width: 392px;
+		margin-bottom: 24px;
 	}
 }
 
 .hero-right {
 	align-self: flex-end;
+	margin-bottom: -3px;
+	width: 100%;
+	height: 100%;
+
+	@media only screen and ( min-width: $tablet ) {
+		margin-bottom: -6px;
+	}
+
 	img {
 		display: block;
 		margin-bottom: -5px;
 		height: auto;
 		margin-left: auto;
 		margin-right: auto;
-		@media only screen and ( max-width: 1150px ) {
-			max-width: 500px;
-			width: 100%;
-		}
 	}
 }

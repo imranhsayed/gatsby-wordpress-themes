@@ -39,6 +39,13 @@ module.exports = ({ wordPressUrl }) => ({
 				url: `${wordPressUrl}/graphql`,
 				refetchInterval: 6000,
 			},
+		},
+		{
+			resolve: 'gatsby-plugin-graphql-image',
+			options: {
+				schemaName: "hwgraphql",
+				imageFieldName: "sourceUrl"
+			}
 		}
 		// this (optional) plugin enables Progressive Web App + Offline functionality
 		// To learn more, visit: https://gatsby.dev/offline
