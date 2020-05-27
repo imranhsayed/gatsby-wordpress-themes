@@ -29,6 +29,9 @@ const FeaturedPosts = ( props ) => {
 					''
 				) }
 			</div>
+			<div className="view-all-wrap">
+				<Link to="/blog"><button>View All</button></Link>
+			</div>
 		</div>
 	) : (
 		''

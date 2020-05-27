@@ -26,11 +26,11 @@ const Hero = ( props ) => {
 				) }
 				{ pageLinkText ? (
 					<Link to="/blog">
-						<button>{ pageLinkText }</button>
+						<button className="button-secondary">{ pageLinkText }</button>
 					</Link>
 				) : (
 					<Link to={ uri  }>
-						<button>{ pageLinkText }</button>
+						<button className="button-secondary">{ pageLinkText }</button>
 					</Link>
 				) }
 			</div>
