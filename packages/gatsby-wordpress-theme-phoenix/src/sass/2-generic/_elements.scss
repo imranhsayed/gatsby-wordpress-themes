@@ -3,6 +3,8 @@ html {
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	color: $black;
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
 }
 
 /* stylelint-disable */
