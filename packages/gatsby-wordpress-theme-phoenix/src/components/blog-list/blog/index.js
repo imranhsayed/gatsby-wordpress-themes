@@ -6,8 +6,8 @@ import './style.scss';
 
 const Blog = ( { pageContext, pageTitle } ) => {
 
-	const { group, index, first, last, pageCount, pathPrefix } = pageContext;
-	const previousUrl = index - 1 == 1 ? `/${ pathPrefix }` : `/${ pathPrefix }/` + ( index - 1 ).toString()
+	const { group, index, first, last, pathPrefix } = pageContext;
+	const previousUrl = 1 === index - 1 ? `/${ pathPrefix }` : `/${ pathPrefix }/` + ( index - 1 ).toString()
 	const nextUrl = `/${ pathPrefix }/` + ( index + 1 ).toString();
 
 	return (

@@ -8,7 +8,9 @@ import Img from "gatsby-image";
 
 const Hero = ( props ) => {
 
-	const { title, description, image: { sourceUrl, sourceUrlSharp, altText }, pageLinkText, pageLink: { uri } } = props.data;
+	console.warn( 'props.data', props.data );
+	// return null;
+	const { title, description, image, pageLinkText, pageLink } = props.data;
 
 	const imgData = useStaticQuery(graphql`
         query {
@@ -37,19 +39,19 @@ const Hero = ( props ) => {
 				) : (
 					<p>{ config.heroSection.heroDescription }</p>
 				) }
-				{ pageLinkText ? (
+				{ isEmpty( pageLink ) ? (
 					<Link to="/blog">
 						<button className="button-secondary">{ pageLinkText }</button>
 					</Link>
 				) : (
-					<Link to={ uri  }>
+					<Link to={ pageLink.uri  }>
 						<button className="button-secondary">{ pageLinkText }</button>
 					</Link>
 				) }
 			</div>
 			<div className="hero-right">
-				{ sourceUrl ? (
-					<Img fluid={ sourceUrlSharp.childImageSharp.fluid } alt={ altText ? altText : 'Banner' } />
+				{ ! isEmpty( image ) ? (
+					<Img fluid={ image.sourceUrlSharp.childImageSharp.fluid } alt={ image.altText ? image.altText : 'Banner' } />
 				) : (
 					<Img fluid={ imgData.file.childImageSharp.fluid } alt="Hero" />
 				) }

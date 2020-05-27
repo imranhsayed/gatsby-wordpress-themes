@@ -1,4 +1,4 @@
-## 🎨 Gatsby WordPress theme
+## 🎨 Gatsby WordPress themes
 [![Project Status: WIP – Initial development is in progress.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 A Gatsby theme for WordPress, using Decoupled Architecture.
@@ -11,12 +11,51 @@ Backend in WordPress.
 |--------------------------------------------------------|-----------------|
 | [Imran Sayed](mailto:codeytek.academy@gmail.com)       |  @imranhsayed   |
 
+## Set Up
+
+1. Upload and activate all the plugins from wordpress/plugins folder of this repo, into your WordPress Site.
+
+OR,
+
+a. Clone the WordPress plugin [Headless CMS](https://github.com/imranhsayed/headless-cms) in your WordPress
+plugin directory and activate it.
+
+b. Clone and activate [wp-graphql](https://github.com/wp-graphql/wp-graphql) -test on ( v0.8.3 ) in WordPress plugin directory.
+c. Clone and activate [wp-graphiql](https://github.com/wp-graphql/wp-graphiql) in WordPress plugin directory.
+d. Clone and activate [wp-graphql-acf](https://github.com/wp-graphql/wp-graphql-acf) in WordPress plugin directory.
+e. Install and activate [ACF WordPress plugin](https://wordpress.org/plugins/advanced-custom-fields/) in the WordPress.
+
+2. * Rename `.env-example` file to `.env` and add your WordPress SITE_URL in `site` directory : 
+`SITE_URL=https://example.com`
+
+3. - Set Header menu as `HCMS Header Menu`
+   
+   ![](demos/header-menu-demo.png)
+   
+   - Set Footer menu as `HCMS Footer Menu`
+   ![](demos/footer-menu-demo.png)
+   
+4. You can also set text widgets in #HCMS Footer #1 and #HCMS Footer #2 under Appearance  > Widgets in WordPress.
+5. Import all the ACF data from `wordpress/acf-data` json file of this repo, into WordPress by going to WordPress Dashboard > Custom Fields > Tools > Import
+6. Create a Home Page ( if there isn't one already )and make sure you have a home page and Location rule is set to Home page.
+![](demos/acf-home-screenshot.png)
+7. Add the ACF required data on the Home page from WordPress Dashboard. 
+8. If isn't already set your site title, description and logo from WordPress customizer.
+    
+**Open the source code and start editing!**
+
+`npm run dev`
+
+Your site is now running at `http://localhost:8000`!
+
+_Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+
 ## 🚀 Development
 
 * Navigate into site’s directory.
 
 ```shell
-npm install      # Run this for the first time.
+yarn install      # Run this for the first time.
 npm run dev      # During development.
 npm run build    # When ready for production.
 ```
@@ -24,45 +63,15 @@ npm run build    # When ready for production.
 * For Storybook
 `npm run storybook`
 
-## Usage
+### :package: Adding/Removing a new package to site folder
 
-1. Clone the WordPress plugin [Headless CMS](https://github.com/imranhsayed/headless-cms) in your WordPress
-plugin directory and activate it.
+`yarn workspace site add package-name`
+`yarn workspace site remove package-name`
 
-2. Clone and activate [wp-graphql](https://github.com/wp-graphql/wp-graphql) in WordPress plugin directory.
+### :package: Adding/Removing a new package to gatsby-wordpress-theme-phoenix folder
 
-3. In your gatsby project
-* `npm i gatsby-wordpress-theme-phoenix`
-* Now in your `gatsby-config.js`, tell gatsby that you will be using this theme and put your wordpress site url.
-
-```javascript
-module.exports = {
-	plugins: [
-		// Tell gatsby which theme you will be using.
-		{
-		resolve: "gatsby-wordpress-theme-phoenix",
-		options: {
-			wordPressUrl: 'xxxxx'
-		}
-	} ]
-};
-```
-
-4. - Set Header menu as `HCMS Header Menu`
-   
-   ![](demos/header-menu-demo.png)
-   
-   - Set Footer menu as `HCMS Footer Menu`
-   ![](demos/footer-menu-demo.png)
-   
-5. You can also set text widgets in #HCMS Footer #1 and #HCMS Footer #2 under Appearance  > Widgets in WordPress.
-    
-**Open the source code and start editing!**
-
-Your site is now running at `http://localhost:8000`!
-
-_Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
-
+`yarn workspace gatsby-wordpress-theme-phoenix add package-name`
+`yarn workspace gatsby-wordpress-theme-phoenix remove package-name`
 
 ## 🧐 What's inside?
 
@@ -105,3 +114,13 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
 
 12. **`README.md`**: A text file containing useful reference information about your project.
+
+### Useful Links ###
+1. [Setting workspaces with yarn](https://www.gatsbyjs.org/blog/2019-05-22-setting-up-yarn-workspaces-for-theme-development/) for theme development
+2. [Installing a gatsby theme](https://www.gatsbyjs.org/docs/themes/using-a-gatsby-theme/) and setting it up.
+
+### Deployment
+1. With vercel
+- `npm i -g vercel`
+- Now in the project root run
+`vercel`

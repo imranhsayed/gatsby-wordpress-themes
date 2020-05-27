@@ -160,7 +160,6 @@ query GET_FRONT_PAGE {
 	        }
 	      }
 	    }
-	  
   }
 }
 `;

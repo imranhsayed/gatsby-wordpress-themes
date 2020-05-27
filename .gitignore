@@ -88,3 +88,5 @@ Thumbs.db
 # Other
 .cache
 .env
+
+.vercel

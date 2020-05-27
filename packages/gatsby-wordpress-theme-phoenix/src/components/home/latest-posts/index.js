@@ -20,8 +20,6 @@ const LatestPosts = ( props ) => {
         }
 	`);
 
-	console.warn( 'imgDat', imgData );
-
 	const { data } = props;
 
 	return ! isEmpty( data ) ? (

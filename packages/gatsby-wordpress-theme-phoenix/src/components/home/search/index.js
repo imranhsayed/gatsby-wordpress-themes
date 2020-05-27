@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import { isEmpty } from 'lodash';
 import './style.scss';
 import ClientSearch from "../client-search";
-// import '../../../images/home/search-background.png';
+import SearchBackgroundImg from '../../../images/home/search-background.png';
 
 const Search = ( props ) => {
 	const {
@@ -34,8 +34,8 @@ const Search = ( props ) => {
 			className="search-section"
 			style={ {
 				background: `url( ${ backgroundURL } )`,
-				backgroundSize: 'cover',
-				backgroundPosition: 'center',
+				backgroundPosition: "center",
+				backgroundSize: "cover",
 			} }
 		>
 

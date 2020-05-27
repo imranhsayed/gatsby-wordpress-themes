@@ -11,20 +11,7 @@ Backend in WordPress.
 |--------------------------------------------------------|-----------------|
 | [Imran Sayed](mailto:codeytek.academy@gmail.com)       |  @imranhsayed   |
 
-## 🚀 Development
-
-* Navigate into site’s directory.
-
-```shell
-yarn install      # Run this for the first time.
-npm run dev      # During development.
-npm run build    # When ready for production.
-```
-
-* For Storybook
-`npm run storybook`
-
-## Usage
+## Set Up
 
 1. Upload and activate all the plugins from wordpress/plugins folder of this repo, into your WordPress Site.
 
@@ -50,14 +37,31 @@ e. Install and activate [ACF WordPress plugin](https://wordpress.org/plugins/adv
    
 4. You can also set text widgets in #HCMS Footer #1 and #HCMS Footer #2 under Appearance  > Widgets in WordPress.
 5. Import all the ACF data from `wordpress/acf-data` json file of this repo, into WordPress by going to WordPress Dashboard > Custom Fields > Tools > Import
-6. Make sure you have a home page and Location rule is set to Home page.
+6. Create a Home Page ( if there isn't one already )and make sure you have a home page and Location rule is set to Home page.
 ![](demos/acf-home-screenshot.png)
+7. Add the ACF required data on the Home page from WordPress Dashboard. 
+8. If isn't already set your site title, description and logo from WordPress customizer.
     
 **Open the source code and start editing!**
+
+`npm run dev`
 
 Your site is now running at `http://localhost:8000`!
 
 _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+
+## 🚀 Development
+
+* Navigate into site’s directory.
+
+```shell
+yarn install      # Run this for the first time.
+npm run dev      # During development.
+npm run build    # When ready for production.
+```
+
+* For Storybook
+`npm run storybook`
 
 ### :package: Adding/Removing a new package to site folder
 
@@ -114,3 +118,9 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 ### Useful Links ###
 1. [Setting workspaces with yarn](https://www.gatsbyjs.org/blog/2019-05-22-setting-up-yarn-workspaces-for-theme-development/) for theme development
 2. [Installing a gatsby theme](https://www.gatsbyjs.org/docs/themes/using-a-gatsby-theme/) and setting it up.
+
+### Deployment
+1. With vercel
+- `npm i -g vercel`
+- Now in the project root run
+`vercel`

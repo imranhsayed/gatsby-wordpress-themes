@@ -11,7 +11,7 @@ const FrontPage = ( props ) => {
 
 	const {
 		      pageContext: {
-			      page: { title, frontPageMeta: { banner, searchSection, featuredPostsSection } },
+			      page: { frontPageMeta: { banner, searchSection, featuredPostsSection } },
 			      posts,
 			      postSearchData: { allPosts, options }
 		      }
