@@ -13,7 +13,8 @@ Backend in WordPress.
 
 ## Live Demo
 
-[Demo](https://gatsby-wordpress-theme-phoenix.netlify.app)
+[Demo on Netlify](https://gatsby-wordpress-theme-phoenix.netlify.app)
+[Demo on Vercel](https://gatsby-wordpress-themes.imranhsayed.now.sh/)
 
 ![](demos/home-page-demo.png)
 

@@ -10,6 +10,7 @@
     "gatsby-image": "^2.4.5",
     "gatsby-paginate": "^1.1.1",
     "gatsby-plugin-manifest": "^2.4.3",
+    "gatsby-plugin-offline": "^3.2.7",
     "gatsby-plugin-react-helmet": "^3.3.1",
     "gatsby-plugin-sass": "^2.3.1",
     "gatsby-plugin-sharp": "^2.6.3",
@@ -53,18 +54,18 @@
   "author": "Imran Sayed",
   "license": "MIT",
   "bugs": {
-	"url": "https://github.com/imranhsayed/gatsby-wordpress-themes/issues"
+    "url": "https://github.com/imranhsayed/gatsby-wordpress-themes/issues"
   },
   "homepage": "https://github.com/imranhsayed/gatsby-wordpress-themes#readme",
   "repository": {
-	"type": "git",
-	"url": "git+https://github.com/imranhsayed/gatsby-wordpress-themes.git"
+    "type": "git",
+    "url": "git+https://github.com/imranhsayed/gatsby-wordpress-themes.git"
   },
   "keywords": [
-	"gatsby-wordpress-theme",
-	"gatsby",
-	"wordpress",
-	"react",
-	"javascript"
+    "gatsby-wordpress-theme",
+    "gatsby",
+    "wordpress",
+    "react",
+    "javascript"
   ]
 }

@@ -7,7 +7,8 @@ Backend in WordPress.
 
 # Live Demo
 
-[Demo](https://gatsby-wordpress-theme-phoenix.netlify.app)
+[Demo on Netlify](https://gatsby-wordpress-theme-phoenix.netlify.app)
+[Demo on Vercel](https://gatsby-wordpress-themes.imranhsayed.now.sh/)
 
 ![](demos/home-page-demo.png)
 
@@ -126,7 +127,28 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 2. [Installing a gatsby theme](https://www.gatsbyjs.org/docs/themes/using-a-gatsby-theme/) and setting it up.
 
 ### Deployment
-1. With vercel
+#### With vercel
+
+- Signup on [vercel.com](https://vercel.com/)
+- Click on Import Project and then add the configurations.
+![](demos/vercel-setting-one.png)
+
+- On [vercel](https://vercel.com/), make sure you add these from settings of the project:
+![](demos/vercel-settings.png)
+
+
+#### From CLI:
 - `npm i -g vercel`
 - Now in the project root run
 `vercel`
+
+- Add the following configurations
+* build command: `npm run build`
+* output directory: `site/public`
+* development command: `npm run dev` 
+* root directory: `/`
+
+
+### Theme on npm
+
+[gatsby-wordpress-theme-phoenix](https://www.npmjs.com/package/gatsby-wordpress-theme-phoenix)
