@@ -5,6 +5,12 @@ A Gatsby theme for WordPress, using Decoupled Architecture.
 Front end in React.
 Backend in WordPress.
 
+# Live Demo
+
+[Demo](gatsby-wordpress-theme-phoenix.netlify.app)
+
+![](demos/home-page-demo.png)
+
 ## Maintainer
 
 | Name                                                   | Github Username |

@@ -11,9 +11,11 @@ Backend in WordPress.
 |--------------------------------------------------------|-----------------|
 | [Imran Sayed](mailto:codeytek.academy@gmail.com)       |  @imranhsayed   |
 
-## Screenshot
+## Live Demo
 
-![](demos/home-demo.png)
+[Demo](gatsby-wordpress-theme-phoenix.netlify.app)
+
+![](demos/home-page-demo.png)
 
 ## 🚀 Set Up
 
