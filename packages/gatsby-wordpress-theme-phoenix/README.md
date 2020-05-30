@@ -35,7 +35,7 @@ module.exports = {
 };
 ``` 
 
-2. Upload and activate all the plugins from wordpress/plugins folder of this repo, into your WordPress Site.
+2. Upload and activate all the plugins from [wordpress/plugins](https://github.com/imranhsayed/gatsby-wordpress-themes/tree/master/wordpress/plugins), into your WordPress Site.
 
 OR,
 
