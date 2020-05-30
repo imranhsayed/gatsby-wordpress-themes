@@ -5,13 +5,25 @@ A Gatsby theme for WordPress, using Decoupled Architecture.
 Front end in React.
 Backend in WordPress.
 
-## Maintainer
+## 🔥 Features
+1. Uses React with Gatsby ( Blazing Fast )
+2. PWA ( Works Offline )
+3. Image Optimization ( blur effect )
+4. ACF
+5. GraphQL ( with wp-graphql on WordPress )
+6. Blog Page with Pagination
+7. Offline Search Feature
+8. Categories, Archive Page, Custom Home Page
+9. Custom Widgets, Menus
+
+
+## 👨‍💻 Maintainer
 
 | Name                                                   | Github Username |
 |--------------------------------------------------------|-----------------|
 | [Imran Sayed](mailto:codeytek.academy@gmail.com)       |  @imranhsayed   |
 
-## Live Demo
+## 🌐 Live Demo
 
 [Demo on Netlify](https://gatsby-wordpress-theme-phoenix.netlify.app)
 [Demo on Vercel](https://gatsby-wordpress-themes.imranhsayed.now.sh/)
