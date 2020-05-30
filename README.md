@@ -18,8 +18,8 @@ Backend in WordPress.
 
 ## 🌐 Live Demo
 
-[Demo on Netlify](https://gatsby-wordpress-theme-phoenix.netlify.app)
-[Demo on Vercel](https://gatsby-wordpress-themes.imranhsayed.now.sh/)
+- [Demo on Netlify](https://gatsby-wordpress-theme-phoenix.netlify.app)
+- [Demo on Vercel](https://gatsby-wordpress-themes.imranhsayed.now.sh/)
 
 ![](demos/home-page-demo.png)
 
@@ -31,6 +31,11 @@ Backend in WordPress.
 
 ## 🚀 Set Up
 
+### Gatsby Setup
+* Rename `.env-example` file to `.env` and add your WordPress SITE_URL in `site` directory : 
+`SITE_URL=https://example.com`
+
+### WordPress Setup
 1. Upload and activate all the plugins from wordpress/plugins folder of this repo, into your WordPress Site.
 
 OR,
@@ -43,22 +48,19 @@ c. Clone and activate [wp-graphiql](https://github.com/wp-graphql/wp-graphiql) i
 d. Clone and activate [wp-graphql-acf](https://github.com/wp-graphql/wp-graphql-acf) in WordPress plugin directory.
 e. Install and activate [ACF WordPress plugin](https://wordpress.org/plugins/advanced-custom-fields/) in the WordPress.
 
-2. * Rename `.env-example` file to `.env` and add your WordPress SITE_URL in `site` directory : 
-`SITE_URL=https://example.com`
-
-3. - Set Header menu as `HCMS Header Menu`
+2. - Set Header menu as `HCMS Header Menu`
    
    ![](demos/header-menu-demo.png)
    
    - Set Footer menu as `HCMS Footer Menu`
    ![](demos/footer-menu-demo.png)
    
-4. You can also set text widgets in #HCMS Footer #1 and #HCMS Footer #2 under Appearance  > Widgets in WordPress.
-5. Import all the ACF data from `wordpress/acf-data` json file of this repo, into WordPress by going to WordPress Dashboard > Custom Fields > Tools > Import
-6. Create a Home Page ( if there isn't one already )and make sure you have a home page and Location rule is set to Home page.
+3. You can also set text widgets in #HCMS Footer #1 and #HCMS Footer #2 under Appearance  > Widgets in WordPress.
+4. Import all the ACF data from `wordpress/acf-data` json file of this repo, into WordPress by going to WordPress Dashboard > Custom Fields > Tools > Import
+5. Create a Home Page ( if there isn't one already )and make sure you have a home page and Location rule is set to Home page.
 ![](demos/acf-home-screenshot.png)
-7. Add the ACF required data on the Home page from WordPress Dashboard. 
-8. If isn't already set your site title, description and logo from WordPress customizer.
+6. Add the ACF required data on the Home page from WordPress Dashboard. 
+7. If isn't already set your site title, description and logo from WordPress customizer.
     
 **Open the source code and start editing!**
 

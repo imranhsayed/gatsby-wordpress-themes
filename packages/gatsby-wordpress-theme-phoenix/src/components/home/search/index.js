@@ -36,6 +36,7 @@ const Search = props => {
         background: `url( ${backgroundURL} )`,
         backgroundPosition: "center",
         backgroundSize: "cover",
+	    backgroundColor: '#1e5663'
       }}
     >
       {/* Search */}
