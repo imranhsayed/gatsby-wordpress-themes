@@ -2959,10 +2959,10 @@
   dependencies:
     "@babel/runtime" "^7.9.2"
 
-"@wordpress/base-styles@^1.8.0":
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/@wordpress/base-styles/-/base-styles-1.8.0.tgz#4735e7c8039c5290225441e472554352cb050d1b"
-  integrity sha512-NXcR72DgB61dgcjEmRbbssRlvm5eTuCSOtMvvK7nzkN4J72sLfxXHEONeqzePt92D/60sX+AifmO8DmKN0zzPQ==
+"@wordpress/base-styles@^1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@wordpress/base-styles/-/base-styles-1.9.0.tgz#d6f83169749cf28555db601c2415e90f758bcf85"
+  integrity sha512-AuqLpbGFV0Jt+uYHEHjvv6ewBzjJOo0MytAMy0J3CK9KOc/XiZsLHbbGG1mS2cuQiWQATfjP5sjHveQzQ2zBNQ==
 
 "@wordpress/blob@^2.8.0":
   version "2.8.0"

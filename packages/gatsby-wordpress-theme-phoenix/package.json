@@ -1,14 +1,16 @@
 {
   "name": "gatsby-wordpress-theme-phoenix",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Gatsby WordPress Theme Phoenix",
   "main": "index.js",
   "dependencies": {
+    "@wordpress/base-styles": "^1.9.0",
     "@wordpress/block-library": "^2.18.0",
     "classnames": "^2.2.6",
     "dateformat": "^3.0.3",
     "gatsby-image": "^2.4.5",
     "gatsby-paginate": "^1.1.1",
+    "gatsby-plugin-graphql-image": "^1.0.1",
     "gatsby-plugin-manifest": "^2.4.3",
     "gatsby-plugin-offline": "^3.2.7",
     "gatsby-plugin-react-helmet": "^3.3.1",
@@ -19,9 +21,11 @@
     "gatsby-transformer-sharp": "^2.5.2",
     "js-search": "^2.0.0",
     "lodash": "^4.17.15",
+    "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
     "react-helmet": "^6.0.0",
-    "react-responsive": "^8.0.3"
+    "react-responsive": "^8.0.3",
+    "sass-mq": "^5.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
@@ -30,21 +34,17 @@
     "@storybook/addon-viewport": "^5.3.19",
     "@storybook/addons": "^5.3.18",
     "@storybook/react": "^5.3.18",
-    "@wordpress/base-styles": "^1.8.0",
     "babel-jest": "^26.0.1",
     "babel-loader": "^8.1.0",
     "babel-preset-gatsby": "^0.4.2",
     "gatsby": "^2.21.33",
-    "gatsby-plugin-graphql-image": "^1.0.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.0.1",
-    "node-sass": "^4.14.1",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-test-renderer": "^16.13.1",
-    "sass-loader": "^8.0.2",
-    "sass-mq": "^5.0.1"
+    "sass-loader": "^8.0.2"
   },
   "peerDependencies": {
     "gatsby": "^2.21.33",
