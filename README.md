@@ -7,7 +7,7 @@ Backend in WordPress.
 
 # Live Demo
 
-[Demo](gatsby-wordpress-theme-phoenix.netlify.app)
+[Demo](https://gatsby-wordpress-theme-phoenix.netlify.app)
 
 ![](demos/home-page-demo.png)
 
