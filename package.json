@@ -1,6 +1,6 @@
 {
   "name": "gatsby-wordpress-themes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "Gatsby WordPress Theme Project",
   "main": "index.js",
@@ -11,6 +11,7 @@
   "scripts": {
     "dev": "yarn workspace site dev",
     "build": "yarn workspace site build",
+	"serve": "yarn workspace site serve",
     "start": "yarn workspace site start",
     "storybook": "yarn workspace site storybook",
     "clean": "yarn workspace site clean"

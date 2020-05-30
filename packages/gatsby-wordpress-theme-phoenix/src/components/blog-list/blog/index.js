@@ -1,5 +1,6 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
+import { isEmpty } from 'lodash';
 
 import Post from '../post';
 import './style.scss';
@@ -7,6 +8,11 @@ import './style.scss';
 const Blog = ( { pageContext, pageTitle } ) => {
 
 	const { group, index, first, last, pathPrefix } = pageContext;
+
+	if ( isEmpty( group ) ) {
+		return null;
+	}
+
 	const previousUrl = 1 === index - 1 ? `/${ pathPrefix }` : `/${ pathPrefix }/` + ( index - 1 ).toString()
 	const nextUrl = `/${ pathPrefix }/` + ( index + 1 ).toString();
 

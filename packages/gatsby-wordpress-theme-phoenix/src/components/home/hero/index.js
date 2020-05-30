@@ -8,8 +8,6 @@ import Img from "gatsby-image";
 
 const Hero = ( props ) => {
 
-	console.warn( 'props.data', props.data );
-	// return null;
 	const { title, description, image, pageLinkText, pageLink } = props.data;
 
 	const imgData = useStaticQuery(graphql`
@@ -40,11 +38,11 @@ const Hero = ( props ) => {
 					<p>{ config.heroSection.heroDescription }</p>
 				) }
 				{ isEmpty( pageLink ) ? (
-					<Link to="/blog">
+					<Link to="/blog/">
 						<button className="button-secondary">{ pageLinkText }</button>
 					</Link>
 				) : (
-					<Link to={ pageLink.uri  }>
+					<Link to={ ! isEmpty ( pageLink.uri ) ? pageLink.uri : '/blog/'  }>
 						<button className="button-secondary">{ pageLinkText }</button>
 					</Link>
 				) }

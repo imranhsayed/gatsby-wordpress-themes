@@ -64,14 +64,18 @@ module.exports = async ( { actions, graphql } ) => {
 			pageLength: 3, // This is optional and defaults to 10 if not used
 			pathPrefix: 'blog', // This is optional and defaults to an empty string if not used
 			context: {}, // This is optional and defaults to an empty object if not used
-		})
+		});
 
 		// 2. Create Single PAGE: Loop through all posts and create single posts for posts.
 		posts &&
 		posts.map( ( page ) => {
 
+			if ( undefined === page.slug ) {
+				return;
+			}
+
 			createPage( {
-				path: `blog${ page.uri }`,
+				path: `blog/${ page.slug }`,
 				component: slash( singlePageTemplate ),
 				context: { ...page }, // pass single post page data in context, so its available in the singlePagetTemplate in props.pageContext.
 			} );
