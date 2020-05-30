@@ -50,6 +50,21 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Imran Sayed",
+  "license": "MIT",
+  "bugs": {
+	"url": "https://github.com/imranhsayed/gatsby-wordpress-themes/issues"
+  },
+  "homepage": "https://github.com/imranhsayed/gatsby-wordpress-themes#readme",
+  "repository": {
+	"type": "git",
+	"url": "git+https://github.com/imranhsayed/gatsby-wordpress-themes.git"
+  },
+  "keywords": [
+	"gatsby-wordpress-theme",
+	"gatsby",
+	"wordpress",
+	"react",
+	"javascript"
+  ]
 }
