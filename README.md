@@ -1,4 +1,4 @@
-## 🎨 Gatsby WordPress themes
+## 🎨 [Gatsby WordPress themes](https://www.npmjs.com/package/gatsby-wordpress-theme-phoenix)
 [![Project Status: Active.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 A Gatsby theme for WordPress, using Decoupled Architecture.
