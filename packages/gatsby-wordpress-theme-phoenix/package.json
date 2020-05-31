@@ -1,6 +1,6 @@
 {
   "name": "gatsby-wordpress-theme-phoenix",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Gatsby WordPress Theme Phoenix",
   "main": "index.js",
   "dependencies": {
