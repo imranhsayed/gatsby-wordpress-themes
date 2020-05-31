@@ -19,11 +19,11 @@ module.exports = ({ wordPressUrl }) => ({
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
-				name: `gatsby-starter-default`,
-				short_name: `starter`,
+				name: `Gatsby WordPress Theme`,
+				short_name: `Phoenix`,
 				start_url: `/`,
-				background_color: `#663399`,
-				theme_color: `#663399`,
+				background_color: `#eaeaea`,
+				theme_color: `#1e5663`,
 				display: `minimal-ui`,
 				icon: `${__dirname}/src/images/favicon.png`, // For favicon- This path is relative to the root of the site.
 			},
