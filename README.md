@@ -5,6 +5,8 @@ A Gatsby theme for WordPress, using Decoupled Architecture.
 Front end in React.
 Backend in WordPress.
 
+*** 👨‍💻 Please start my repo to support my work 🙏 ***
+
 ## 🔥 Features
 1. Uses React with Gatsby ( Blazing Fast )
 2. PWA ( Works Offline )

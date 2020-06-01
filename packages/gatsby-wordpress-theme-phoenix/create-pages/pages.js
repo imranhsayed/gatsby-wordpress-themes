@@ -30,6 +30,16 @@ query GET_PAGES {
         }
       }
     }
+    categories(first: 5) {
+	    edges {
+	      node {
+	        id
+	        name
+	        slug
+	        uri
+	      }
+	    }
+	 }
   }
 }
 `;
@@ -44,14 +54,14 @@ module.exports = async ( { actions, graphql } ) => {
 		return await graphql( GET_PAGES )
 			.then( ( { data } ) => {
 
-				const { HWGraphQL: { pages } } = data;
+				const { HWGraphQL: { pages, categories } } = data;
 
-				return { pages: pages.nodes };
+				return { pages: pages.nodes , categories: categories.edges };
 			} );
 	};
 
 	// When the above fetchPosts is resolved, then loop through the results i.e pages to create pages.
-	await fetchPosts().then( ( { pages } ) => {
+	await fetchPosts().then( ( { pages, categories } ) => {
 
 		// 2. Create Single PAGE: Loop through all pages and create single pages for pages.
 		pages &&
@@ -63,7 +73,7 @@ module.exports = async ( { actions, graphql } ) => {
 				createPage( {
 					path: `${ page.uri }`,
 					component: slash( singlePageTemplate ),
-					context: { ...page }, // pass single page data in context, so its available in the singlePagetTemplate in props.pageContext.
+					context: { ...page, categories }, // pass single page data in context, so its available in the singlePagetTemplate in props.pageContext.
 				} );
 
 			}

@@ -3,6 +3,8 @@ import React from 'react';
 import Img from 'gatsby-image';
 import { useStaticQuery, graphql } from "gatsby";
 import { isEmpty } from 'lodash';
+import './style.scss';
+import Taxonomies from "../widgets/taxonomies";
 
 const Page = ( props ) => {
 
@@ -23,30 +25,37 @@ const Page = ( props ) => {
 	return (
 		<>
 			{ ! isEmpty( data )  ? (
-				<>
-					<section className="page-content wrapper">
-						{ ! isEmpty( data.title )  ? (
-							<h2>{ data.title }</h2>
-						) : (
-							''
-						) }
-						{ ! isEmpty( data.featuredImage ) ? (
-							<Img fluid={data.featuredImage.sourceUrlSharp.childImageSharp.fluid} alt={ data.altText ? data.altText : data.title } />
-						) : (
-							<Img fluid={imgData.file.childImageSharp.fluid} alt="Default" />
-						) }
-						{ ! isEmpty( data.content ) ? (
-							<div
-								dangerouslySetInnerHTML={ {
-									__html: data.content,
-								} }
-							/>
-						) : (
-							''
-						) }
-					</section>
-					<aside className="aside"></aside>
-				</>
+				<div className="page-container wrapper">
+					{ ! isEmpty( data.title )  ? (
+						<h2>{ data.title }</h2>
+					) : (
+						''
+					) }
+					<div className="page-content-wrap">
+						<section className="page-content">
+							{/* Uncomment this if you need featured image to be displayed here*/}
+							{/*{ ! isEmpty( data.featuredImage ) ? (*/}
+							{/*	<Img fluid={data.featuredImage.sourceUrlSharp.childImageSharp.fluid} alt={ data.altText ? data.altText : data.title } />*/}
+							{/*) : (*/}
+							{/*	<Img fluid={imgData.file.childImageSharp.fluid} alt="Default" />*/}
+							{/*) }*/}
+
+							{ ! isEmpty( data.content ) ? (
+								<div
+									dangerouslySetInnerHTML={ {
+										__html: data.content,
+									} }
+								/>
+							) : (
+								''
+							) }
+						</section>
+						<aside className="aside">
+							{/* Taxonomy Widget */}
+							<Taxonomies taxonomies={ data.categories }/>
+						</aside>
+					</div>
+				</div>
 			) : (
 				'Loading...'
 			) }

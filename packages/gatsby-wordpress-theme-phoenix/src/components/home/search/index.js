@@ -46,6 +46,7 @@ const Search = props => {
         placeholder={placeholderText}
       />
 
+      {/* taxonomies */}
       {!isEmpty(taxonomies) ? (
         <div className="search-section__categories">
           {taxonomies.map((term, index) => (

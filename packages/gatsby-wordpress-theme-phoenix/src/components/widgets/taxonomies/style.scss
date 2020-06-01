@@ -1,0 +1,17 @@
+.taxonomies-widget-list {
+	padding: 15px  0;
+	border-bottom: 1px solid #eee;
+	&:last-child {
+		border-bottom: none;
+	}
+}
+
+.aside {
+	color: #555;
+	h2 {
+		font-size: 28px;
+		margin-top: 0;
+		margin-bottom: 20px;
+
+	}
+}

@@ -6,8 +6,6 @@ const BlogTemplate = ( props ) => {
 
 	const { pageContext: { nodes } } = props;
 
-	console.warn( 'nodes', nodes );
-
 	return (
 		<Layout>
 			<h1>Blog</h1>
