@@ -35,22 +35,24 @@ const LatestPosts = ( props ) => {
 									key={ post.id }
 									className="latest-post-section"
 								>
-									{ ! isEmpty( post.featuredImage ) ? (
-										<div className="latest-post-section__img">
-											<Img fluid={post.featuredImage.sourceUrlSharp.childImageSharp.fluid} alt={ post.altText ? post.altText : post.title } />
-										</div>
-									) : (
-										<div className="latest-post-section__img">
-											<Img fluid={imgData.file.childImageSharp.fluid} alt="Default" />
-										</div>
-									) }
-									<div className="latest-post-section__content">
-										{ post.excerpt ? (
-											<div className="latest-post-section__excerpt" dangerouslySetInnerHTML={ { __html: post.excerpt } }/>
+									<Link to={ post.uri }>
+										{ ! isEmpty( post.featuredImage ) ? (
+											<div className="latest-post-section__img">
+												<Img fluid={post.featuredImage.sourceUrlSharp.childImageSharp.fluid} alt={ post.altText ? post.altText : post.title } />
+											</div>
 										) : (
-											''
+											<div className="latest-post-section__img">
+												<Img fluid={imgData.file.childImageSharp.fluid} alt="Default" />
+											</div>
 										) }
-									</div>
+										<div className="latest-post-section__content">
+											{ post.excerpt ? (
+												<div className="latest-post-section__excerpt" dangerouslySetInnerHTML={ { __html: post.excerpt } }/>
+											) : (
+												''
+											) }
+										</div>
+									</Link>
 								</div>
 							)
 						) }
