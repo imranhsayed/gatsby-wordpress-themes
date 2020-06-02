@@ -21,8 +21,10 @@
     "url": "git+https://github.com/imranhsayed/gatsby-wordpress-theme.git"
   },
   "keywords": [
+	"gatsby",
+	"gatsby-plugin",
+	"gatsby-theme",
     "gatsby-wordpress-theme",
-    "gatsby",
     "wordpress",
     "react",
     "javascript"

@@ -5,7 +5,13 @@
 - Front end in React
 - Backend in WordPress.
 
-*** 👨‍💻 Please start my repo to support my work 🙏 ***
+<a href="https://www.npmjs.com/package/gatsby-wordpress-theme-phoenix" target="_blank">
+<img src="https://codeytek.com/woo/wp-content/uploads/2020/06/Phoenix.jpg" alt="gatsby theme phoenix hero image" />
+</a>
+
+-----
+
+*** 👨‍💻 Please star my repo to support my work 🙏 ***
 
 ## 🔥 Features
 1. Uses React with Gatsby ( Blazing Fast )
