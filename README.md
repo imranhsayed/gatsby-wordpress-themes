@@ -5,11 +5,11 @@
 - Front end in React
 - Backend in WordPress.
 
-<a href="https://www.npmjs.com/package/gatsby-wordpress-theme-phoenix" target="_blank">
+<a href="https://youtu.be/nYXL1KKjKrc" target="_blank">
 <img src="https://codeytek.com/woo/wp-content/uploads/2020/06/Phoenix.jpg" alt="gatsby theme phoenix hero image" />
 </a>
 
------
+### [Video Demo](https://youtu.be/nYXL1KKjKrc)
 
 *** 👨‍💻 Please star my repo to support my work 🙏 ***
 
