@@ -1,6 +1,10 @@
 
 import React from 'react';
+
+/* eslint-disable */
 import Img from 'gatsby-image';
+/* eslint-enable */
+
 import { useStaticQuery, graphql } from "gatsby";
 import { isEmpty } from 'lodash';
 import './style.scss';
@@ -10,6 +14,7 @@ const Page = ( props ) => {
 
 	const { data } = props;
 
+	/* eslint-disable */
 	const imgData = useStaticQuery(graphql`
         query {
             file(relativePath: {eq: "default/default.jpg"}) {
@@ -21,6 +26,7 @@ const Page = ( props ) => {
             }
         }
 	`);
+	/* eslint-enable */
 
 	return (
 		<>

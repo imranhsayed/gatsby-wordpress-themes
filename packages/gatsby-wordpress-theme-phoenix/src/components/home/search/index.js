@@ -1,10 +1,9 @@
 import React from "react"
-import config from "../../../../client-config"
-import { Link } from "gatsby"
-import { isEmpty } from "lodash"
-import "./style.scss"
-import ClientSearch from "../client-search"
-import SearchBackgroundImg from "../../../images/home/search-background.png"
+import config from "../../../../client-config";
+import { Link } from "gatsby";
+import { isEmpty } from "lodash";
+import "./style.scss";
+import ClientSearch from "../client-search";
 
 const Search = props => {
   const {

@@ -123,7 +123,7 @@ class ClientSearch extends Component {
 
   render() {
     const { searchResults, searchQuery } = this.state
-    const { posts, placeholder } = this.props
+    const { placeholder } = this.props
 
     const queryResults = searchResults
 

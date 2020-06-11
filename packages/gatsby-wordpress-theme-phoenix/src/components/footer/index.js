@@ -27,11 +27,6 @@ const Footer = ( { data } ) => {
 
 	const socialLinksData = socialLinks.length ? socialLinks : staticSocialLink;
 
-	const socialIcons = {
-		facebook: <FacebookIcon />,
-		twitter: <TwitterIcon />,
-	};
-
 	return (
 		<footer className="footer">
 
@@ -71,7 +66,7 @@ const Footer = ( { data } ) => {
 							<ul className="social-links">
 								{ socialLinksData.map( socialLink => (
 									<li key={ socialLink.iconName }>
-										<a href={ socialLink.iconUrl } target="_blank">
+										<a href={ socialLink.iconUrl } target="_blank" rel="noreferrer">
 											{ 'facebook' === socialLink.iconName ? <FacebookIcon/> : '' }
 											{ 'twitter' === socialLink.iconName ? <TwitterIcon/> : '' }
 											{ 'instagram' === socialLink.iconName ? <InstagramIcon/> : '' }
