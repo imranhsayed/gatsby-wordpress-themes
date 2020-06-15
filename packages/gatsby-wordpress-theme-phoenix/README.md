@@ -38,7 +38,9 @@ Backend in WordPress.
 - [Demo on Netlify](https://gatsby-wordpress-theme-phoenix.netlify.app)
 - [Demo on Vercel](https://gatsby-wordpress-themes.imranhsayed.now.sh/)
 
-![](demos/home-page-demo.png)
+<a href="https://youtu.be/nYXL1KKjKrc" target="_blank">
+<img src="https://codeytek.com/wp-content/uploads/2020/06/home-page-demo.png" alt="gatsby theme phoenix demo" />
+</a>
 
 ## 🚀 Set Up
 
@@ -76,16 +78,27 @@ c. Clone and activate [wp-graphiql](https://github.com/wp-graphql/wp-graphiql) i
 d. Clone and activate [wp-graphql-acf](https://github.com/wp-graphql/wp-graphql-acf) in WordPress plugin directory.
 e. Install and activate [ACF WordPress plugin](https://wordpress.org/plugins/advanced-custom-fields/) in the WordPress.
 
-2. - Set Header menu as `HCMS Header Menu`
+2. 
+   * Set Header menu as `HCMS Header Menu`
    
-   ![](demos/header-menu-demo.png)
+   <a href="https://youtu.be/nYXL1KKjKrc" target="_blank">
+   <img src="https://codeytek.com/wp-content/uploads/2020/06/header-menu-demo.png" alt="Header Menu Demo" />
+   </a>
    
-   - Set Footer menu as `HCMS Footer Menu`
-   ![](demos/footer-menu-demo.png)
+   * Set Footer menu as `HCMS Footer Menu`.
+   
+      <a href="https://youtu.be/nYXL1KKjKrc" target="_blank">
+      <img src="https://codeytek.com/wp-content/uploads/2020/06/footer-menu-demo.png" alt="Footer menu demo" />
+      </a>
    
 3. You can also set text widgets in #HCMS Footer #1 and #HCMS Footer #2 under Appearance  > Widgets in WordPress.
 4. Import all the ACF data from `wordpress/acf-data` json file of this repo, into WordPress by going to WordPress Dashboard > Custom Fields > Tools > Import
 5. Create a Home Page ( if there isn't one already )and make sure you have a home page and Location rule is set to Home page.
-![](demos/acf-home-screenshot.png)
+
+
+<a href="https://youtu.be/nYXL1KKjKrc" target="_blank">
+<img src="https://codeytek.com/wp-content/uploads/2020/06/acf-home-screenshot.png" alt="ACF menu screenshot" />
+</a>
+
 6. Add the ACF required data on the Home page from WordPress Dashboard. 
 7. If isn't already set your site title, description and logo from WordPress customizer.

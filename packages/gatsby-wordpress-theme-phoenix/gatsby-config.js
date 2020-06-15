@@ -41,6 +41,12 @@ module.exports = ({ wordPressUrl }) => ({
 			},
 		},
 		{
+			resolve: `gatsby-plugin-s3`,
+			options: {
+				bucketName: `${ process.env.AWS_BUCKET_NAME }`
+			},
+		},
+		{
 			resolve: 'gatsby-plugin-graphql-image',
 			options: {
 				schemaName: "hwgraphql",
