@@ -92,6 +92,8 @@ npm run build    # When ready for production.
 `cd package/gatsby-wordpress-theme-phoenix`
 `npm run storybook`
 
+![](demos/storybook.png)
+
 ### :package: Adding/Removing a new package to site folder
 
 `yarn workspace site add package-name`
@@ -108,14 +110,15 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
     .
     ├── node_modules
+    ├── demos
+    ├── packages
     ├── src
     ├── .gitignore
-    ├── .prettierrc
+    ├── .site
     ├── gatsby-browser.js
     ├── gatsby-config.js
     ├── gatsby-node.js
     ├── gatsby-ssr.js
-    ├── LICENSE
     ├── package-lock.json
     ├── package.json
     └── README.md
