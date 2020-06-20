@@ -89,6 +89,7 @@ npm run build    # When ready for production.
 ```
 
 * For Storybook
+`cd package/gatsby-wordpress-theme-phoenix`
 `npm run storybook`
 
 ### :package: Adding/Removing a new package to site folder

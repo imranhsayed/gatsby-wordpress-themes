@@ -29,9 +29,15 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addon-viewport": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/react": "^5.3.19",
     "babel-jest": "^26.0.1",
     "babel-loader": "^8.1.0",
     "babel-preset-gatsby": "^0.4.2",
+    "babel-preset-react-app": "^9.1.2",
     "gatsby": "^2.21.33",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.0.1",
@@ -57,12 +63,16 @@
     "url": "git+https://github.com/imranhsayed/gatsby-wordpress-themes.git"
   },
   "keywords": [
-	"gatsby",
-	"gatsby-plugin",
-	"gatsby-theme",
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-theme",
     "gatsby-wordpress-theme",
     "wordpress",
     "react",
     "javascript"
-  ]
+  ],
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  }
 }
