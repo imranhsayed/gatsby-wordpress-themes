@@ -88,9 +88,12 @@ npm run dev      # During development.
 npm run build    # When ready for production.
 ```
 
-* For Storybook
-`cd package/gatsby-wordpress-theme-phoenix`
-`npm run storybook`
+### 📕 Storybook:
+
+For Storybook:
+
+* `cd package/gatsby-wordpress-theme-phoenix`
+* `npm run storybook`
 
 ![](demos/storybook.png)
 
