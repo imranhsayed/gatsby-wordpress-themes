@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import Link from 'gatsby-link';
 import { isEmpty } from 'lodash';
 
 import Post from '../post';

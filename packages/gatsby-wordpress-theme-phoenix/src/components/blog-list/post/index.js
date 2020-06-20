@@ -1,23 +1,12 @@
 import React from 'react';
 import { isEmpty } from 'lodash';
 import { getFormattedDate } from '../../../utils/functions';
-import Img from 'gatsby-image';
-import { useStaticQuery, graphql, Link } from "gatsby";
+import Link from 'gatsby-link';
 import './style.scss';
+import defaultImage from '../../../images/default/default.jpg';
+import Img from 'gatsby-image';
 
 const Post = ( { post } ) => {
-
-	const imgData = useStaticQuery(graphql`
-        query {
-            file(relativePath: {eq: "default/default.jpg"}) {
-                childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid
-                    }
-                }
-            }
-        }
-	`);
 
 	if ( isEmpty( post ) ) {
 		return null;
@@ -31,7 +20,7 @@ const Post = ( { post } ) => {
 				</div>
 			) : (
 				<div className="featured-post-section__img">
-					<Img fluid={imgData.file.childImageSharp.fluid} alt="Default" />
+					<img src={ defaultImage } alt="Post default"/>
 				</div>
 			) }
 			<div className="featured-post-section__content">

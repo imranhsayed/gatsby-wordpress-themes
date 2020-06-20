@@ -14,9 +14,7 @@
 		"test:debug": "jest --runInBand",
 		"test:watch": "jest --watch",
 		"test:coverage": "jest --coverage=true",
-		"test:update": "jest --verbose --updateSnapshot",
-		"storybook": "start-storybook -p 6006",
-		"build-storybook": "build-storybook"
+		"test:update": "jest --verbose --updateSnapshot"
 	},
 	"author": "Imran Sayed",
 	"license": "MIT",

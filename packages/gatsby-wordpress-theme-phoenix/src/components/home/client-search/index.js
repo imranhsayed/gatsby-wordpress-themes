@@ -139,7 +139,7 @@ class ClientSearch extends Component {
             value={searchQuery}
             onChange={this.searchData}
             placeholder={placeholder}
-            autocomplete="off" // removes the autosearch suggestions
+            autoComplete="off" // removes the autosearch suggestions
           />
           <SearchResults queryResults={queryResults} />
         </form>

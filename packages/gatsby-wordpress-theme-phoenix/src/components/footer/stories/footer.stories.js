@@ -2,7 +2,8 @@
  * External dependencies.
  */
 import React from 'react';
-const Footer = () => (<div>Footer</div>);
+import { Footer } from "../footer-static";
+import data from './footer-data';
 
 /**
  * Internal dependencies.
@@ -15,5 +16,5 @@ export default {
 };
 
 export const footer = () => (
-	<Footer/>
+	<Footer data={ data }/>
 );
