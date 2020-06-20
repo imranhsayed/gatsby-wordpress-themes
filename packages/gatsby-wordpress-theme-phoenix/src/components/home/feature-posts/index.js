@@ -1,13 +1,15 @@
 import React from 'react';
 import config from '../../../../client-config';
-import { Link } from 'gatsby';
+import Link from 'gatsby-link';
 import { isEmpty } from 'lodash';
 import Post from '../../blog-list/post';
 import './style.scss';
-// import '../../../images/default/default.jpg';
 
 const FeaturedPosts = ( props ) => {
+	
 	const { featuredPosts, heading } = props.data;
+	
+	console.warn( 'data', props.data );
 
 	return ! isEmpty ( featuredPosts ) ? (
 		<div className="featured-posts-section">

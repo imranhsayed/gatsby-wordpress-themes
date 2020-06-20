@@ -1,6 +1,6 @@
 import React from 'react';
 import { isEmpty } from 'lodash';
-import { Link } from "gatsby";
+import Link from 'gatsby-link';
 
 const SearchResults = ( { queryResults } ) => {
 

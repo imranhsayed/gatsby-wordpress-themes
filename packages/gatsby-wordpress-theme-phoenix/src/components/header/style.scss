@@ -40,7 +40,7 @@
 	height: calc(100vh - 80px);
 	border-top: 1px solid $color__border;
 	width: 100vw;
-	z-index: 1;
+	z-index: 10;
 
 	&.menu-visible {
 		right: 0;
@@ -206,4 +206,8 @@
 	@include mq( large ) {
 		display: none;
 	}
+}
+
+.mobile-menu-open {
+	position: fixed;
 }

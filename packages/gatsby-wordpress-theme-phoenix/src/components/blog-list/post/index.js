@@ -8,8 +8,6 @@ import Img from 'gatsby-image';
 
 const Post = ( { post } ) => {
 
-	console.warn( 'post', post );
-
 	if ( isEmpty( post ) ) {
 		return null;
 	}
