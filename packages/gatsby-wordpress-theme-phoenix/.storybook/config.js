@@ -1,5 +1,6 @@
 import { configure } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
+global.__BASE_PATH__ = '';
 
 // automatically import all files ending in *.stories.js
 configure( [

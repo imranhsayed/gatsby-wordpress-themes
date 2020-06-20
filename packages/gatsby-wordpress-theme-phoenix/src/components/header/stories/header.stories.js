@@ -1,14 +1,19 @@
+/**
+ * External dependencies.
+ */
 import React from 'react';
-import { Button } from '@storybook/react/demo';
+import { Header } from '../header-static';
 
-export default { title: 'Button' };
 
-export const withText = () => <Button>Hello Button</Button>;
+/**
+ * Internal dependencies.
+ */
+import './../style.scss';
+import data from './header-data';
 
-export const withEmoji = () => (
-	<Button>
-    <span role="img" aria-label="so cool">
-      😀 😎 👍 💯
-    </span>
-	</Button>
-);
+export default {
+	title: 'Components/Header',
+	component: Header
+};
+
+export const header = () => <Header data={ data }/>;

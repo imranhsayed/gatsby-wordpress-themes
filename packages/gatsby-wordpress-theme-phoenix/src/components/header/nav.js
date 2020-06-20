@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { Link } from 'gatsby';
+import  Link from 'gatsby-link';
 import { each, isEmpty } from 'lodash';
 import classnames from 'classnames';
 
