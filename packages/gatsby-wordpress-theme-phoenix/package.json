@@ -4,6 +4,7 @@
   "description": "Gatsby WordPress Theme Phoenix",
   "main": "index.js",
   "dependencies": {
+    "@storybook/addon-storysource": "^5.3.19",
     "@wordpress/base-styles": "^1.9.0",
     "@wordpress/block-library": "^2.18.0",
     "classnames": "^2.2.6",
@@ -47,7 +48,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-test-renderer": "^16.13.1",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^8.0.2",
+    "styled-components": "^5.1.1"
   },
   "peerDependencies": {
     "gatsby": "^2.21.33",

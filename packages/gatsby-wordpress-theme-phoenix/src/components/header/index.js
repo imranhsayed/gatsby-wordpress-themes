@@ -3,19 +3,11 @@
  */
 import PropTypes from 'prop-types';
 import React from 'react';
-
-Header.propTypes = {
-	siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-	siteTitle: 'Phoenix: Gatsby WordPress Theme',
-	data: {
-		HWGraphQL: {}
-	},
-};
-
 import { StaticQuery, graphql } from 'gatsby';
+
+/**
+ * Internal dependencies.
+ */
 import SEO from "../seo";
 import { Header } from "./header-static";
 
@@ -68,3 +60,14 @@ export default ( props ) => {
 		/>
 	)
 }
+
+Header.propTypes = {
+	siteTitle: PropTypes.string,
+};
+
+Header.defaultProps = {
+	siteTitle: 'Phoenix: Gatsby WordPress Theme',
+	data: {
+		HWGraphQL: {}
+	},
+};

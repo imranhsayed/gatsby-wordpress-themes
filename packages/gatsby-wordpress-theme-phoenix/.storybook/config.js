@@ -1,5 +1,11 @@
-import { configure } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
+import { GlobalStyle } from '../src/shared/global';
+import React from 'react';
+
+// Add viewport addon for mobile responsive development.
+import { addParameters, addDecorator, configure } from '@storybook/react';
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+
 global.__BASE_PATH__ = '';
 
 // automatically import all files ending in *.stories.js
@@ -24,12 +30,15 @@ window.___navigate = pathname => {
 	action( "NavigateTo:" )( pathname )
 }
 
-// Add viewport addon for mobile responsive development.
-import { addParameters } from '@storybook/react';
-import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
-
 addParameters( {
 	viewport: {
 		viewports: INITIAL_VIEWPORTS,
 	},
 } );
+
+addDecorator(story => (
+	<>
+		<GlobalStyle />
+		{story()}
+	</>
+));
