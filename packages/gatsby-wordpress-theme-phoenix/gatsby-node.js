@@ -1,5 +1,5 @@
-const createAllPosts = require( './create-pages/pages' );
-const createAllPages = require( './create-pages/posts' );
+const createAllPages = require( './create-pages/pages' );
+const createAllPosts = require( './create-pages/posts' );
 const createFrontPage = require( './create-pages/front-page' );
 const createBlogPage = require( './create-pages/blog' );
 const createArchivePage = require( './create-pages/archive' );

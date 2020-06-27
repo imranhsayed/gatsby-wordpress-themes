@@ -1,5 +1,5 @@
 const { slash } = require( `gatsby-core-utils` );
-const singlePageTemplate = require.resolve(`../src/templates/post/index.js`);
+const singlePostPageTemplate = require.resolve(`../src/templates/post/index.js`);
 
 // Get all the posts.
 const GET_POSTS = `
@@ -69,7 +69,7 @@ module.exports = async ( { actions, graphql } ) => {
 
 			createPage( {
 				path: `${ page.uri }`,
-				component: slash( singlePageTemplate ),
+				component: slash( singlePostPageTemplate ),
 				context: { ...page, categories }, // pass single post page data in context, so its available in the singlePagetTemplate in props.pageContext.
 			} );
 
