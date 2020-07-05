@@ -6,10 +6,8 @@ import Post from '../../blog-list/post';
 import './style.scss';
 
 const FeaturedPosts = ( props ) => {
-	
+
 	const { featuredPosts, heading } = props.data;
-	
-	console.warn( 'data', props.data );
 
 	return ! isEmpty ( featuredPosts ) ? (
 		<div className="featured-posts-section">
