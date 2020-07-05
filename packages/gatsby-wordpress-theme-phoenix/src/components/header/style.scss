@@ -34,7 +34,7 @@
 	display: flex;
 	position: absolute;
 	top: 70px;
-	right: -102vw;
+	right: -104vw;
 	transition: 0.3s all;
 	background-color: $white;
 	height: calc(100vh - 80px);
@@ -43,7 +43,7 @@
 	z-index: 10;
 
 	&.menu-visible {
-		right: 0;
+		right: -20px;
 
 		@include mq( $from: medium, $until: large ) {
 			right: -20px;
@@ -88,6 +88,7 @@
 
 		.header-nav__toggle-menu-btn {
 			padding-left: 3px;
+			margin-top: -6px;
 		}
 
 		&.menu-has-children .header-nav__toggle-menu-btn::after {

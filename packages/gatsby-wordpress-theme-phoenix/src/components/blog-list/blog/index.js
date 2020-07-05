@@ -24,8 +24,8 @@ const Blog = ( { pageContext, pageTitle } ) => {
 			) ) }
 
 			<div className="blog__page-navigation">
-				{ ! first ? <Link to={ previousUrl }>≪ Previous Page</Link> : '' }
-				{ ! last ? <Link to={ nextUrl }>Next Page ≫</Link> : '' }
+				{ ! first ? <Link to={ previousUrl }>≪ Previous Page</Link> : null }
+				{ ! last ? <Link to={ nextUrl }>Next Page ≫</Link> : null }
 			</div>
 		</div>
 	)

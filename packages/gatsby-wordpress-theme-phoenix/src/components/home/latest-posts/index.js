@@ -48,18 +48,14 @@ const LatestPosts = ( props ) => {
 										<div className="latest-post-section__content">
 											{ post.excerpt ? (
 												<div className="latest-post-section__excerpt" dangerouslySetInnerHTML={ { __html: post.excerpt } }/>
-											) : (
-												''
-											) }
+											) : null }
 										</div>
 									</Link>
 								</div>
 							)
 						) }
 					</div>
-				) : (
-					''
-				) }
+				) : null }
 			</div>
 
 			<div className="view-all-wrap">

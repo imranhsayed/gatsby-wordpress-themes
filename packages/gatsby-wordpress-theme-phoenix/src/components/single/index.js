@@ -2,6 +2,7 @@ import Taxonomies from "../widgets/taxonomies";
 import React from "react";
 import { isEmpty } from 'lodash';
 import './style.scss';
+import Img from 'gatsby-image';
 
 const Single = ( { data } ) => {
 
@@ -24,7 +25,7 @@ const Single = ( { data } ) => {
 				>
 
 					{/* Featured Image */}
-					{ ( undefined !== featuredImage && null !== featuredImage ) ? <img src={ featuredImage.sourceUrl } srcSet={ featuredImage.srcSet } alt={ featuredImage.altText }/>  : '' }
+					{ ( undefined !== featuredImage && null !== featuredImage ) ? <Img fluid={featuredImage.sourceUrlSharp.childImageSharp.fluid} alt={ featuredImage.altText } />  : null }
 
 					<div
 						className="entry-content"

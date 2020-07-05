@@ -26,22 +26,16 @@ const Post = ( { post } ) => {
 			<div className="featured-post-section__content">
 				{ post.title ? (
 					<h3 dangerouslySetInnerHTML={ { __html: post.title } } />
-				) : (
-					''
-				) }
+				) : null }
 				{ post.excerpt ? (
 					<div className="featured-post-section__excerpt" dangerouslySetInnerHTML={ { __html: post.excerpt } }/>
-				) : (
-					''
-				) }
+				) : null }
 				<div className="featured-post-section__meta">
 					{ post.date ? (
 						<span className="featured-post-section__date">
 							{ getFormattedDate( post.date ) }
 						</span>
-					) : (
-						''
-					) }
+					) : null }
 					<Link
 						className="featured-post-section__read-more"
 						to={ post.uri }

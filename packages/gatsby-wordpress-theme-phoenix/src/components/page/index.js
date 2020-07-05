@@ -34,17 +34,15 @@ const Page = ( props ) => {
 				<div className="page-container wrapper">
 					{ ! isEmpty( data.title )  ? (
 						<h2>{ data.title }</h2>
-					) : (
-						''
-					) }
+					) : null }
 					<div className="page-content-wrap">
 						<section className="page-content">
 							{/* Uncomment this if you need featured image to be displayed here*/}
-							{/*{ ! isEmpty( data.featuredImage ) ? (*/}
-							{/*	<Img fluid={data.featuredImage.sourceUrlSharp.childImageSharp.fluid} alt={ data.altText ? data.altText : data.title } />*/}
-							{/*) : (*/}
-							{/*	<Img fluid={imgData.file.childImageSharp.fluid} alt="Default" />*/}
-							{/*) }*/}
+							{ ! isEmpty( data.featuredImage ) ? (
+								<Img fluid={data.featuredImage.sourceUrlSharp.childImageSharp.fluid} alt={ data.altText ? data.altText : data.title } />
+							) : (
+								<Img fluid={imgData.file.childImageSharp.fluid} alt="Default" />
+							) }
 
 							{ ! isEmpty( data.content ) ? (
 								<div
@@ -52,9 +50,7 @@ const Page = ( props ) => {
 										__html: data.content,
 									} }
 								/>
-							) : (
-								''
-							) }
+							) : null }
 						</section>
 						<aside className="aside">
 							{/* Taxonomy Widget */}

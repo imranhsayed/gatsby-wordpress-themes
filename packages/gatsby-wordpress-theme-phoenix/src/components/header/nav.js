@@ -126,16 +126,12 @@ const Nav = ( props ) => {
 													)
 												) }
 											</ul>
-										) : (
-											''
-										) }
+										) : null }
 									</li>
 								);
 							} ) }
 						</ul>
-					) : (
-						''
-					) }
+					) : null }
 
 				</div>
 			</nav>

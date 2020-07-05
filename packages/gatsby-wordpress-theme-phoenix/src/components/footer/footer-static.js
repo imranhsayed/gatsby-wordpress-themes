@@ -25,8 +25,8 @@ const Footer = ( { data } ) => {
 			<div className="wrapper">
 				{/*Top section*/}
 				<div className="footer__top">
-					{ sidebarOne ? <div  dangerouslySetInnerHTML={ { __html: sidebarOne } } className="footer__sidebar-one footer-widget"/> : '' }
-					{ sidebarTwo ? <div  dangerouslySetInnerHTML={ { __html: sidebarTwo } } className="footer__sidebar-two footer-widget"/> : '' }
+					{ sidebarOne ? <div  dangerouslySetInnerHTML={ { __html: sidebarOne } } className="footer__sidebar-one footer-widget"/> : null }
+					{ sidebarTwo ? <div  dangerouslySetInnerHTML={ { __html: sidebarTwo } } className="footer__sidebar-two footer-widget"/> : null }
 
 					{
 						footerMenuItems.edges.length ? (
@@ -59,15 +59,15 @@ const Footer = ( { data } ) => {
 								{ socialLinksData.map( socialLink => (
 									<li key={ socialLink.iconName }>
 										<a href={ socialLink.iconUrl } target="_blank" rel="noreferrer">
-											{ 'facebook' === socialLink.iconName ? <FacebookIcon/> : '' }
-											{ 'twitter' === socialLink.iconName ? <TwitterIcon/> : '' }
-											{ 'instagram' === socialLink.iconName ? <InstagramIcon/> : '' }
-											{ 'youtube' === socialLink.iconName ? <YouTubeIcon/> : '' }
+											{ 'facebook' === socialLink.iconName ? <FacebookIcon/> : null }
+											{ 'twitter' === socialLink.iconName ? <TwitterIcon/> : null }
+											{ 'instagram' === socialLink.iconName ? <InstagramIcon/> : null }
+											{ 'youtube' === socialLink.iconName ? <YouTubeIcon/> : null }
 										</a>
 									</li>
 								) ) }
 							</ul> :
-							''
+							null
 					}
 				</div>
 			</div>
