@@ -1,7 +1,7 @@
 module.exports = ({ wordPressUrl }) => ({
 	siteMetadata: {
 		title: `Gatsby WordPress Theme`,
-		description: `Gatsby WordPress Theme - Formerly known as Spot.IM`,
+		description: `Gatsby WordPress Theme`,
 		author: `@imranhsayed`,
 	},
 	plugins: [
