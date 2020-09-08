@@ -40,7 +40,7 @@
 ## 🚀 Set Up
 
 ### Gatsby Setup
-* Rename `.env-example` file to `.env` and add your WordPress SITE_URL in `site` directory : 
+* Rename [`.env-example`](https://github.com/imranhsayed/gatsby-wordpress-themes/blob/master/site/.env-example) in site directory file to `.env` and add your WordPress SITE_URL in `site` directory : 
 `SITE_URL=https://example.com`
 
 ### WordPress Setup
