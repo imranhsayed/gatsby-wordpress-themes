@@ -23,6 +23,7 @@
 7. Offline Search Feature
 8. Categories, Archive Page, Custom Home Page
 9. Custom Widgets, Menus
+10. Yoast seo support
 
 ## 🌐 Live Demo
 
@@ -40,21 +41,19 @@
 ## 🚀 Set Up
 
 ### Gatsby Setup
-* Rename [`.env-example`](https://github.com/imranhsayed/gatsby-wordpress-themes/blob/master/site/.env-example) in site directory file to `.env` and add your WordPress SITE_URL in `site` directory : 
+* Rename [`.env-example`](https://github.com/imranhsayed/gatsby-wordpress-themes/blob/master/site/.env-example) in site directory file to `.env` and add your WordPress SITE_URL and FRONTEND_URL in `site` directory : 
 `SITE_URL=https://example.com`
 
 ### WordPress Setup
-1. Upload and activate all the plugins from wordpress/plugins folder of this repo, into your WordPress Site.
+1. On your WordPress site, download, Upload and activate all the plugins from wordpress/plugins folder of this repo, into your WordPress Site.
 
-OR,
-
-a. Clone the WordPress plugin [Headless CMS](https://github.com/imranhsayed/headless-cms) in your WordPress
-plugin directory and activate it.
-
-b. Clone and activate [wp-graphql](https://github.com/wp-graphql/wp-graphql) -test on ( v0.8.3 ) in WordPress plugin directory.
-c. Clone and activate [wp-graphiql](https://github.com/wp-graphql/wp-graphiql) in WordPress plugin directory.
-d. Clone and activate [wp-graphql-acf](https://github.com/wp-graphql/wp-graphql-acf) in WordPress plugin directory.
-e. Install and activate [ACF WordPress plugin](https://wordpress.org/plugins/advanced-custom-fields/) in the WordPress.
+a. [Headless CMS](https://github.com/imranhsayed/gatsby-wordpress-themes/blob/master/wordpress/plugins/headless-cms.zip)
+b. [wp-graphql](https://github.com/imranhsayed/gatsby-wordpress-themes/blob/master/wordpress/plugins/wp-graphql.zip)
+c. [wp-graphiql](https://github.com/wp-graphql/wp-graphiql)
+d. [ACF WordPress plugin](https://wordpress.org/plugins/advanced-custom-fields/)
+e. [wp-graphql-acf](https://github.com/wp-graphql/wp-graphql-acf)
+f. [Yoast-SEO](https://github.com/imranhsayed/gatsby-wordpress-themes/blob/master/wordpress/plugins/wordpress-seo.14.5.zip)
+g. [wp-graphql-yoast-seo](https://github.com/imranhsayed/gatsby-wordpress-themes/blob/master/wordpress/plugins/wp-graphql-yoast-seo.zip)
 
 2. - Set Header menu as `HCMS Header Menu`
    
