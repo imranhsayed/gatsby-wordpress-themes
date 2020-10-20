@@ -1,8 +1,9 @@
-module.exports = ({ wordPressUrl }) => ({
+module.exports = ({ wordPressUrl, frontendUrl }) => ({
 	siteMetadata: {
 		title: `Gatsby WordPress Theme`,
 		description: `Gatsby WordPress Theme`,
 		author: `@imranhsayed`,
+		siteUrl: `${frontendUrl}`
 	},
 	plugins: [
 		`gatsby-plugin-react-helmet`,

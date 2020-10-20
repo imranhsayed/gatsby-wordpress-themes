@@ -8,7 +8,6 @@ import { StaticQuery, graphql } from 'gatsby';
 /**
  * Internal dependencies.
  */
-import SEO from "../seo";
 import { Header } from "./header-static";
 
 /**
@@ -52,10 +51,7 @@ export default ( props ) => {
 				    }
 				` }
 			render={ data => (
-				<>
-					<SEO title="Phoenix: Gatsby WordPress Theme" header={ data.HWGraphQL.header }/>
-					<Header data={ data }/>
-				</>
+				<Header data={ data }/>
 			) }
 		/>
 	)
@@ -66,7 +62,6 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-	siteTitle: 'Phoenix: Gatsby WordPress Theme',
 	data: {
 		HWGraphQL: {}
 	},
