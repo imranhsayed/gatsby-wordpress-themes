@@ -102,3 +102,9 @@ e. Install and activate [ACF WordPress plugin](https://wordpress.org/plugins/adv
 
 6. Add the ACF required data on the Home page from WordPress Dashboard. 
 7. If isn't already set your site title, description and logo from WordPress customizer.
+
+## Styles used by elementor
+Check in the source
+
+* id='elementor-icons-css'
+* id='elementor-common-css'
