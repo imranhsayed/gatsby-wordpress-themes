@@ -1,5 +1,6 @@
 const { slash } = require( `gatsby-core-utils` );
 const singlePostPageTemplate = require.resolve(`../src/templates/post/index.js`);
+const {SeoFragment} = require( './fragments/seo/index.js' );
 
 // Get all the posts.
 const GET_POSTS = `
@@ -13,6 +14,9 @@ query GET_POSTS {
         content
         date
         uri
+        seo {
+           ...SeoFragment
+        }
 		featuredImage {
 			altText
 			sourceUrl
@@ -42,6 +46,7 @@ query GET_POSTS {
 	 }
   }
 }
+${SeoFragment}
 `;
 
 module.exports = async ( { actions, graphql } ) => {

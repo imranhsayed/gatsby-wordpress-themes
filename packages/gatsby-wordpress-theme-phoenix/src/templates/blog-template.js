@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import Layout from "../components/layout";
+import SEO from "../components/seo";
 
 const BlogTemplate = ( props ) => {
 
@@ -8,6 +9,8 @@ const BlogTemplate = ( props ) => {
 
 	return (
 		<Layout>
+			{/* @TODO SEO to be added.*/}
+			<SEO title="Phoenix: Gatsby WordPress Theme" seo={{}} uri={'/blog'}/>
 			<h1>Blog</h1>
 			<div id="blog">
 				{

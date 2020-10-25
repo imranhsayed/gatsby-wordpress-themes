@@ -1,5 +1,6 @@
 const { slash } = require( `gatsby-core-utils` );
 const frontPageTemplate = require.resolve(`../src/templates/front-page/index.js`);
+const {SeoFragment} = require( './fragments/seo/index.js' );
 
 // Get all the front page data.
 const GET_FRONT_PAGE = `
@@ -7,6 +8,9 @@ query GET_FRONT_PAGE {
   HWGraphQL {
 	  pageBy(uri: "home") {
 	    title
+	    seo {
+	        ...SeoFragment
+	    }
 	    frontPageMeta {
 	      fieldGroupName
 	      banner {
@@ -162,6 +166,7 @@ query GET_FRONT_PAGE {
 	    }
   }
 }
+${SeoFragment}
 `;
 
 module.exports = async ( { actions, graphql } ) => {

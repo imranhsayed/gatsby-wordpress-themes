@@ -1,6 +1,7 @@
 const { slash } = require( `gatsby-core-utils` );
 const singlePageTemplate = require.resolve(`../src/templates/archive/index.js`);
 const createPaginatedPages = require('gatsby-paginate');
+const {SeoFragment} = require( './fragments/seo/index.js' );
 
 // Get all the posts.
 const GET_POSTS = `
@@ -13,6 +14,9 @@ query GET_POSTS {
         slug
         uri
         id
+	    seo {
+	       ...SeoFragment
+	    }
         posts(first: 5000) {
           edges {
             node {
@@ -20,6 +24,9 @@ query GET_POSTS {
               title
               uri
               date
+              seo{
+               ...SeoFragment
+              }
               categories {
                 edges {
                   node {
@@ -55,6 +62,7 @@ query GET_POSTS {
   }
   }
 }
+${SeoFragment}
 `;
 
 module.exports = async ( { actions, graphql } ) => {

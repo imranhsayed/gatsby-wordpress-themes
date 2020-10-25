@@ -1,6 +1,7 @@
 const { slash } = require( `gatsby-core-utils` );
 const customTemplates = [ '/blog/', '/', '/blog', 'blog' ];
 const singlePageTemplate = require.resolve(`../src/templates/page/index.js`);
+const {SeoFragment} = require( './fragments/seo/index.js' );
 
 // Get all the pages.
 const GET_PAGES = `
@@ -13,6 +14,9 @@ query GET_PAGES {
         content
         date
         uri
+        seo {
+          ...SeoFragment
+        }
 		featuredImage {
 			altText
 			sourceUrl
@@ -42,6 +46,7 @@ query GET_PAGES {
 	 }
   }
 }
+${SeoFragment}
 `;
 
 module.exports = async ( { actions, graphql } ) => {
