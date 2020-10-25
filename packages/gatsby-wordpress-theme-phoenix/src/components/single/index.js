@@ -3,6 +3,7 @@ import React from "react";
 import { isEmpty } from 'lodash';
 import './style.scss';
 import Img from 'gatsby-image';
+import { sanitize } from "../../utils/functions";
 
 const Single = ( { data } ) => {
 
@@ -11,13 +12,14 @@ const Single = ( { data } ) => {
 	}
 
 	const { id, postId, title, content, featuredImage, categories } = data;
+	const showSidebar = 'false' !== process.env.GATSBY_SIDEBAR;
 
 	return (
 		<div className="post-container wrapper">
 			<div className="entry-header">
-				<h1 className="entry-title" dangerouslySetInnerHTML={{ __html: title }} />
+				<h1 className="entry-title" dangerouslySetInnerHTML={{ __html: sanitize(title) }} />
 			</div>
-			<div className="post-content-wrap">
+			<div className={`post-content-wrap ${showSidebar ? 'has-sidebar' : '' }`}>
 				<article
 					data-id={id}
 					id={`post-${postId}`}
@@ -33,10 +35,14 @@ const Single = ( { data } ) => {
 					/>
 					{/* .entry-content */}
 				</article>
-				<aside className="aside">
-					{/* Taxonomy Widget */}
-					<Taxonomies taxonomies={ categories }/>
-				</aside>
+				{
+					showSidebar ? (
+						<aside className="aside">
+							{/* Taxonomy Widget */}
+							<Taxonomies taxonomies={ categories }/>
+						</aside>
+					): null
+				}
 			</div>
 		</div>
 	)

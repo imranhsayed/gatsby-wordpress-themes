@@ -1,3 +1,5 @@
+import DOMPurify from 'dompurify';
+
 export const normalizePath = path => {
 
 	const pathStr = path.split( '/');
@@ -41,3 +43,28 @@ export const getFormattedDate = ( dateString ) => {
 
 	return `${ date.getDate() }-${ date.getMonth() + 1 }-${ date.getFullYear() }`;
 };
+
+/**
+ * Remove the trailing slash from a string.
+ *
+ * @param {String } targetString Target string.
+ * @return {string} String with trailing slash removed.
+ */
+export const removeTrailingSlash = ( targetString ) => {
+	if ( ! targetString ) {
+		return '';
+	}
+
+	return targetString.replace(/\/$/, "")
+}
+
+/**
+ * Sanitize markup or text when used inside dangerouslysetInnerHTML
+ *
+ * @param {string} content Plain or html string.
+ *
+ * @return {string} Sanitized string
+ */
+export const sanitize = (content) => {
+	return process.browser ? DOMPurify.sanitize(content) : content
+}

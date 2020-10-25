@@ -2,12 +2,15 @@
 
 .page-content-wrap {
 
-	display: grid;
 	padding-bottom: 48px;
-	grid-template-columns: 100%;
 
-	@media only screen and ( min-width: $tablet ) {
-		grid-template-columns: 70% 30%;
+	&.has-sidebar {
+		display: grid;
+		grid-template-columns: 100%;
+
+		@media only screen and ( min-width: $tablet ) {
+			grid-template-columns: 70% 30%;
+		}
 	}
 
 	.page-content {

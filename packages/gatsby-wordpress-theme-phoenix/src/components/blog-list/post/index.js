@@ -1,6 +1,6 @@
 import React from 'react';
 import { isEmpty } from 'lodash';
-import { getFormattedDate } from '../../../utils/functions';
+import { getFormattedDate, sanitize } from '../../../utils/functions';
 import Link from 'gatsby-link';
 import './style.scss';
 import defaultImage from '../../../images/default/default.jpg';
@@ -25,10 +25,10 @@ const Post = ( { post } ) => {
 			) }
 			<div className="featured-post-section__content">
 				{ post.title ? (
-					<h3 dangerouslySetInnerHTML={ { __html: post.title } } />
+					<h3 dangerouslySetInnerHTML={ { __html: sanitize(post?.title) } } />
 				) : null }
 				{ post.excerpt ? (
-					<div className="featured-post-section__excerpt" dangerouslySetInnerHTML={ { __html: post.excerpt } }/>
+					<div className="featured-post-section__excerpt" dangerouslySetInnerHTML={ { __html: sanitize(post?.excerpt) } }/>
 				) : null }
 				<div className="featured-post-section__meta">
 					{ post.date ? (

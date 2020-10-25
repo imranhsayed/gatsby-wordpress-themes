@@ -21,6 +21,8 @@ query GET_POSTS {
           edges {
             node {
               id
+              databaseId
+              bodyClasses
               title
               uri
               date

@@ -66,6 +66,15 @@ module.exports = {
 };
 ``` 
 
+Also add the following to your `.env` file and set the `GATSBY_ELEMENTOR_SUPPORT` `GATSBY_SIDEBAR` if you would
+like the theme to support page and post building with elementor and sidebar.
+
+```shell script
+GATSBY_WORDPRESS_SITE_URL=xxx
+GATSBY_ELEMENTOR_SUPPORT=true
+GATSBY_SIDEBAR=false
+```
+
 ### WordPress Site Setup
 
 ### WordPress Setup
@@ -103,3 +112,9 @@ g. [wp-graphql-yoast-seo](https://github.com/imranhsayed/gatsby-wordpress-themes
 
 6. Add the ACF required data on the Home page from WordPress Dashboard. 
 7. If isn't already set your site title, description and logo from WordPress customizer.
+
+## Styles used by elementor
+Check in the source
+
+* id='elementor-icons-css'
+* id='elementor-common-css'
