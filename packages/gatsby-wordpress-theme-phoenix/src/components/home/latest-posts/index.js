@@ -5,6 +5,7 @@ import config from '../../../../client-config';
 import Img from 'gatsby-image';
 import { useStaticQuery, graphql } from "gatsby";
 import './style.scss';
+import { sanitize } from "../../../utils/functions";
 
 const LatestPosts = ( props ) => {
 
@@ -47,7 +48,7 @@ const LatestPosts = ( props ) => {
 										) }
 										<div className="latest-post-section__content">
 											{ post.excerpt ? (
-												<div className="latest-post-section__excerpt" dangerouslySetInnerHTML={ { __html: post.excerpt } }/>
+												<div className="latest-post-section__excerpt" dangerouslySetInnerHTML={ { __html: sanitize(post?.excerpt) } }/>
 											) : null }
 										</div>
 									</Link>

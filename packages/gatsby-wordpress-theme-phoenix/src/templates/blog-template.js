@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import { sanitize } from "../utils/functions";
 
 const BlogTemplate = ( props ) => {
 
@@ -36,7 +37,7 @@ const BlogTemplate = ( props ) => {
 							>
 								<header>
 									<Link to={ `/blog/${uri}` }>
-										<h2 dangerouslySetInnerHTML={{ __html: title }} />
+										<h2 dangerouslySetInnerHTML={{ __html: sanitize(title) }} />
 									</Link>
 								</header>
 
@@ -49,7 +50,7 @@ const BlogTemplate = ( props ) => {
 								{/*	Excerpt*/}
 								<div
 									dangerouslySetInnerHTML={{
-										__html: excerptText
+										__html: sanitize(excerptText)
 									}}
 								/>
 

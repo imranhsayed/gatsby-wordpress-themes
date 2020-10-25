@@ -3,6 +3,7 @@ import React from "react";
 import { isEmpty } from 'lodash';
 import './style.scss';
 import Img from 'gatsby-image';
+import { sanitize } from "../../utils/functions";
 
 const Single = ( { data } ) => {
 
@@ -16,7 +17,7 @@ const Single = ( { data } ) => {
 	return (
 		<div className="post-container wrapper">
 			<div className="entry-header">
-				<h1 className="entry-title" dangerouslySetInnerHTML={{ __html: title }} />
+				<h1 className="entry-title" dangerouslySetInnerHTML={{ __html: sanitize(title) }} />
 			</div>
 			<div className={`post-content-wrap ${showSidebar ? 'has-sidebar' : '' }`}>
 				<article
@@ -30,7 +31,7 @@ const Single = ( { data } ) => {
 
 					<div
 						className="entry-content"
-						dangerouslySetInnerHTML={{ __html: content }}
+						dangerouslySetInnerHTML={{ __html: sanitize(content) }}
 					/>
 					{/* .entry-content */}
 				</article>
