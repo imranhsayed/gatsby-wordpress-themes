@@ -15,22 +15,24 @@ const Post = ( props ) => {
 	const hasElementorSupport = 'false' !== process.env.GATSBY_ELEMENTOR_SUPPORT;
 
 	return (
+		<>
 		<Layout>
 			<SEO title="Phoenix: Gatsby WordPress Theme" seo={pageContext?.seo} uri={pageContext?.uri}/>
 			<Helmet>
 				{
 					hasElementorSupport && elementorCssLinksData.length && elementorCssLinksData.map( linkData => (
-						<link rel='stylesheet' id={linkData?.id} href={linkData?.link} media='all' />
+						<link key={linkData?.id} rel='stylesheet' id={linkData?.id} href={linkData?.link} media='all' />
 					) )
 				}
 			</Helmet>
 			<Single data={ pageContext }/>
+		</Layout>
 			{
 				hasElementorSupport && elementorJsLinksData.length && elementorJsLinksData.map( linkData => (
-					<script id={linkData?.id} src={linkData?.src} />
+					<script key={linkData?.id} id={linkData?.id} src={linkData?.src} />
 				) )
 			}
-		</Layout>
+		</>
 	)
 };
 
