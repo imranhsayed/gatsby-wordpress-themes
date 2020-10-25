@@ -27,11 +27,13 @@ const Post = ( props ) => {
 			</Helmet>
 			<Single data={ pageContext }/>
 		</Layout>
-			{
-				hasElementorSupport && elementorJsLinksData.length && elementorJsLinksData.map( linkData => (
-					<script key={linkData?.id} id={linkData?.id} src={linkData?.src} />
-				) )
-			}
+			{/*{*/}
+			{/*	hasElementorSupport && elementorJsLinksData.length && elementorJsLinksData.map( linkData => (*/}
+			{/*		<script key={linkData?.id} id={linkData?.id} src={linkData?.src} />*/}
+			{/*	) )*/}
+			{/*}*/}
+			{/*<script src='https://codeytek.com/headless-cms/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4' id='jquery-ui-position-js'/>*/}
+			{/*<script src='https://codeytek.com/headless-cms/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp' id='jquery-core-js'/>*/}
 		</>
 	)
 };

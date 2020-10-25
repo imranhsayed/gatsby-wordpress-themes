@@ -9,10 +9,12 @@ import { useStaticQuery, graphql } from "gatsby";
 import { isEmpty } from 'lodash';
 import './style.scss';
 import Taxonomies from "../widgets/taxonomies";
+import { sanitize } from "../../utils/functions";
 
 const Page = ( props ) => {
 
 	const { data } = props;
+	const showSidebar = 'false' !== process.env.GATSBY_SIDEBAR;
 
 	/* eslint-disable */
 	const imgData = useStaticQuery(graphql`
@@ -35,27 +37,27 @@ const Page = ( props ) => {
 					{ ! isEmpty( data.title )  ? (
 						<h2>{ data.title }</h2>
 					) : null }
-					<div className="page-content-wrap">
+					<div className={`page-content-wrap ${showSidebar ? 'has-sidebar' : '' }`}>
 						<section className="page-content">
 							{/* Uncomment this if you need featured image to be displayed here*/}
 							{ ! isEmpty( data.featuredImage ) ? (
 								<Img fluid={data.featuredImage.sourceUrlSharp.childImageSharp.fluid} alt={ data.altText ? data.altText : data.title } />
-							) : (
-								<Img fluid={imgData.file.childImageSharp.fluid} alt="Default" />
-							) }
+							) : null }
 
 							{ ! isEmpty( data.content ) ? (
 								<div
 									dangerouslySetInnerHTML={ {
-										__html: data.content,
+										__html: sanitize( data.content ),
 									} }
 								/>
 							) : null }
 						</section>
-						<aside className="aside">
-							{/* Taxonomy Widget */}
-							<Taxonomies taxonomies={ data.categories }/>
-						</aside>
+						{ showSidebar ? (
+							<aside className="aside">
+								{/* Taxonomy Widget */}
+								<Taxonomies taxonomies={ data.categories }/>
+							</aside>
+						) : null }
 					</div>
 				</div>
 			) : (

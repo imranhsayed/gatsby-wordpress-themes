@@ -69,10 +69,6 @@ export const getElementorJsLinksData = () => {
 			src: `https://codeytek.com/headless-cms/wp-content/plugins/elementor/assets/js/common.min.js`
 		},
 		{
-			id: 'elementor-app-loader-js',
-			src: `https://codeytek.com/headless-cms/wp-content/plugins/elementor/assets/js/app-loader.min.js`
-		},
-		{
 			id: 'elementor-frontend-modules-js',
 			src: `https://codeytek.com/headless-cms/wp-content/plugins/elementor/assets/js/frontend-modules.min.js`
 		},
@@ -94,14 +90,3 @@ export const getElementorJsLinksData = () => {
 		}
 	]
 }
-
-
-// <link rel='stylesheet' id='elementor-animations-css'  href='${wordPressSiteUrl}/wp-content/plugins/elementor/assets/lib/animations/animations.min.css' media='all' />
-// <link rel='stylesheet' id='elementor-frontend-legacy-css'  href='${wordPressSiteUrl}/wp-content/plugins/elementor/assets/css/frontend-legacy.min.css' media='all' />
-// <link rel='stylesheet' id='elementor-frontend-css'  href='${wordPressSiteUrl}/wp-content/plugins/elementor/assets/css/frontend.min.css' media='all' />
-// <link rel='stylesheet' id='elementor-post-507-css'  href='${wordPressSiteUrl}/wp-content/uploads/elementor/css/post-507.css' media='all' />
-// <link rel='stylesheet' id='elementor-global-css'  href='${wordPressSiteUrl}/wp-content/uploads/elementor/css/global.css' media='all' />
-// <link rel='stylesheet' id='elementor-post-521-css'  href='${wordPressSiteUrl}/wp-content/uploads/elementor/css/post-521.css' media='all' />
-// <link rel='stylesheet' id='elementor-icons-shared-0-css'  href='${wordPressSiteUrl}/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css' media='all' />
-// <link rel='stylesheet' id='elementor-icons-fa-brands-css'  href='${wordPressSiteUrl}/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css' media='all' />
-// <link rel='stylesheet' id='elementor-icons-fa-solid-css'  href='${wordPressSiteUrl}/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css' media='all' />

@@ -9,6 +9,7 @@
     "@wordpress/block-library": "^2.18.0",
     "classnames": "^2.2.6",
     "dateformat": "^3.0.3",
+    "dompurify": "^2.2.0",
     "gatsby-image": "^2.4.5",
     "gatsby-link": "^2.4.6",
     "gatsby-paginate": "^1.1.1",
