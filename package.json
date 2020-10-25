@@ -1,6 +1,6 @@
 {
   "name": "gatsby-wordpress-themes",
-  "version": "1.0.6",
+  "version": "2.0.8",
   "private": true,
   "description": "Gatsby WordPress Theme Project",
   "main": "index.js",

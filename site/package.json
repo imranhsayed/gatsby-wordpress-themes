@@ -1,6 +1,6 @@
 {
 	"name": "site",
-	"version": "0.0.1",
+	"version": "2.0.8",
 	"description": "Site to test the Gatsby WordPress Theme Phoenix",
 	"main": "gatsby-config.js",
 	"scripts": {
