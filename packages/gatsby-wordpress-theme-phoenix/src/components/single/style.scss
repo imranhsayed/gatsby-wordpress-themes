@@ -2,12 +2,15 @@
 
 .post-content-wrap {
 
-	display: grid;
 	padding-bottom: 48px;
-	grid-template-columns: 100%;
 
-	@media only screen and ( min-width: $tablet ) {
-		grid-template-columns: 70% 30%;
+	&.has-sidebar {
+		display: grid;
+		grid-template-columns: 100%;
+
+		@media only screen and ( min-width: $tablet ) {
+			grid-template-columns: 70% 30%;
+		}
 	}
 
 	.post-content {
@@ -15,8 +18,13 @@
 		padding-bottom: 48px;
 
 		@media only screen and ( min-width: $tablet ) {
-			padding-right: 48px;
 			padding-bottom: 0;
+		}
+	}
+
+	.aside {
+		@media only screen and ( min-width: $tablet ) {
+			padding-left: 48px;
 		}
 	}
 }
