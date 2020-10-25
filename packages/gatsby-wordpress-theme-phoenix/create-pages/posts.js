@@ -9,6 +9,7 @@ query GET_POSTS {
     posts( first: 5000 ) {
       nodes {
         id
+        databaseId
         title
         excerpt
         content

@@ -10,6 +10,7 @@ query GET_PAGES {
     pages( first: 5000 ) {
       nodes {
         id
+        databaseId
         title
         content
         date

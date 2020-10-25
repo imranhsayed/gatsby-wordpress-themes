@@ -107,6 +107,7 @@ query GET_FRONT_PAGE {
 	  posts(first: 3) {
 	    nodes {
 	      id
+	      databaseId
 	      title
 	      excerpt
 	      date

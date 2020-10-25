@@ -41,3 +41,17 @@ export const getFormattedDate = ( dateString ) => {
 
 	return `${ date.getDate() }-${ date.getMonth() + 1 }-${ date.getFullYear() }`;
 };
+
+/**
+ * Remove the trailing slash from a string.
+ *
+ * @param {String } targetString Target string.
+ * @return {string} String with trailing slash removed.
+ */
+export const removeTrailingSlash = ( targetString ) => {
+	if ( ! targetString ) {
+		return '';
+	}
+
+	return targetString.replace(/\/$/, "")
+}
