@@ -4,6 +4,7 @@ import Page from '../../components/page';
 import SEO from "../../components/seo";
 import { getElementorCssLinksData } from "../../utils/elementor";
 import { Helmet } from "react-helmet";
+import BodyClassName from "react-body-classname";
 
 const PageTemplate = ( { pageContext } ) => {
 
@@ -21,6 +22,7 @@ const PageTemplate = ( { pageContext } ) => {
 					) )
 				}
 			</Helmet>
+			<BodyClassName className={pageContext?.bodyClasses}/>
 			<Page data={ pageContext }/>
 		</Layout>
 	)

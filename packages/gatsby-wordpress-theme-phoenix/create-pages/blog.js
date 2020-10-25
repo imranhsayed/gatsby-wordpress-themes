@@ -11,6 +11,7 @@ query GET_POSTS {
 	      node {
 	        id
 	        databaseId
+	        bodyClasses
 	        title
 	        excerpt
 	        content

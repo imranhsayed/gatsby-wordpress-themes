@@ -31,7 +31,7 @@ const Single = ( { data } ) => {
 
 					<div
 						className="entry-content"
-						dangerouslySetInnerHTML={{ __html: sanitize(content) }}
+						dangerouslySetInnerHTML={{ __html: content }}
 					/>
 					{/* .entry-content */}
 				</article>

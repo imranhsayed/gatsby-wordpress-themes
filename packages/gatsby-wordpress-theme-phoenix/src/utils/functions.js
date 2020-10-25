@@ -1,3 +1,5 @@
+import DOMPurify from 'dompurify';
+
 export const normalizePath = path => {
 
 	const pathStr = path.split( '/');

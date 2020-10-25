@@ -10,6 +10,7 @@ query GET_POSTS {
       nodes {
         id
         databaseId
+        bodyClasses
         title
         excerpt
         content

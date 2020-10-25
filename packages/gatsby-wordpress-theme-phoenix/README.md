@@ -66,6 +66,15 @@ module.exports = {
 };
 ``` 
 
+Also add the following to your `.env` file and set the `GATSBY_ELEMENTOR_SUPPORT` `GATSBY_SIDEBAR` if you would
+like the theme to support page and post building with elementor and sidebar.
+
+```shell script
+GATSBY_WORDPRESS_SITE_URL=xxx
+GATSBY_ELEMENTOR_SUPPORT=true
+GATSBY_SIDEBAR=false
+```
+
 ### WordPress Site Setup
 
 ### WordPress Setup

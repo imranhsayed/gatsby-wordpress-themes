@@ -11,6 +11,7 @@ query GET_PAGES {
       nodes {
         id
         databaseId
+        bodyClasses
         title
         content
         date

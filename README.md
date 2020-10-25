@@ -24,6 +24,7 @@
 8. Categories, Archive Page, Custom Home Page
 9. Custom Widgets, Menus
 10. Yoast seo support
+11. Supports Post and Page building with Elementor 
 
 ## 🌐 Live Demo
 
@@ -41,8 +42,17 @@
 ## 🚀 Set Up
 
 ### Gatsby Setup
-* Rename [`.env-example`](https://github.com/imranhsayed/gatsby-wordpress-themes/blob/master/site/.env-example) in site directory file to `.env` and add your WordPress SITE_URL and FRONTEND_URL in `site` directory : 
-`SITE_URL=https://example.com`
+* Rename [`.env-example`](https://github.com/imranhsayed/gatsby-wordpress-themes/blob/master/site/.env-example) in site directory file to `.env` and add the following, in this `site` directory of this repo.
+ 
+ - Also set the `GATSBY_ELEMENTOR_SUPPORT` and `GATSBY_SIDEBAR` if you would
+ like the theme to support page and post building with elementor and sidebar. 
+ 
+```shell script
+GATSBY_WORDPRESS_SITE_URL=xxx
+FRONTEND_URL=xxx # Set this to http://localhost:3000 for development and your live front-end gatsby url for production.
+GATSBY_ELEMENTOR_SUPPORT=true
+GATSBY_SIDEBAR=false
+```
 
 ### WordPress Setup
 1. On your WordPress site, download, Upload and activate all the plugins from wordpress/plugins folder of this repo, into your WordPress Site.

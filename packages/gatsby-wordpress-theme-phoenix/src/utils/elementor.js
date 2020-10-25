@@ -1,8 +1,19 @@
 import { removeTrailingSlash } from "./functions";
 const wordPressSiteUrl = removeTrailingSlash( process.env.GATSBY_WORDPRESS_SITE_URL );
 
+/**
+ * Get Elementor CSS Links data
+ *
+ * @param {int} postId post ID.
+ *
+ * @return {Array} Elementor CSS Links data.
+ */
 export const getElementorCssLinksData = ( postId ) => {
 	return [
+		{
+			id: 'google-fonts-1-css',
+			link: 'https://fonts.googleapis.com/css?family=Roboto:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic|Roboto Slab:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic|Pacifico:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic|Playfair Display:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic'
+		},
 		{
 			id: 'elementor-icons-css',
 			link: `${wordPressSiteUrl}/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css`
@@ -43,50 +54,9 @@ export const getElementorCssLinksData = ( postId ) => {
 			id: 'elementor-icons-fa-solid-css',
 			link: `${wordPressSiteUrl}/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css`
 		},
-	]
-}
-
-export const getElementorJsLinksData = () => {
-	return [
 		{
-			id: 'backbone-marionette-js',
-			src: `https://codeytek.com/headless-cms/wp-content/plugins/elementor/assets/lib/backbone/backbone.marionette.min.js`
-		},
-		{
-			id: 'backbone-radio-js',
-			src: `https://codeytek.com/headless-cms/wp-content/plugins/elementor/assets/lib/backbone/backbone.radio.min.js`
-		},
-		{
-			id: 'elementor-common-modules-js',
-			src: `https://codeytek.com/headless-cms/wp-content/plugins/elementor/assets/js/common-modules.min.js`
-		},
-		{
-			id: 'elementor-dialog-js',
-			src: `https://codeytek.com/headless-cms/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.8.1`
-		},
-		{
-			id: 'elementor-common-js',
-			src: `https://codeytek.com/headless-cms/wp-content/plugins/elementor/assets/js/common.min.js`
-		},
-		{
-			id: 'elementor-frontend-modules-js',
-			src: `https://codeytek.com/headless-cms/wp-content/plugins/elementor/assets/js/frontend-modules.min.js`
-		},
-		{
-			id: 'elementor-waypoints-js',
-			src: `https://codeytek.com/headless-cms/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js`
-		},
-		{
-			id: 'swiper-js',
-			src: `https://codeytek.com/headless-cms/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js`
-		},
-		{
-			id: 'share-link-js',
-			src: `https://codeytek.com/headless-cms/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js`
-		},
-		{
-			id: 'elementor-frontend-js',
-			src: `https://codeytek.com/headless-cms/wp-content/plugins/elementor/assets/js/frontend.min.js`
+			id: 'elementor-icons-fa-solid-css',
+			link: `${wordPressSiteUrl}/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css`
 		}
 	]
 }

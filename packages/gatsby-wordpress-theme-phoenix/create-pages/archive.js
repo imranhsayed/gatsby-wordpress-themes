@@ -22,6 +22,7 @@ query GET_POSTS {
             node {
               id
               databaseId
+              bodyClasses
               title
               uri
               date

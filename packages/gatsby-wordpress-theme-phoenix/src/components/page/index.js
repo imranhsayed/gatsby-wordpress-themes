@@ -35,7 +35,7 @@ const Page = ( props ) => {
 			{ ! isEmpty( data )  ? (
 				<div className="page-container wrapper">
 					{ ! isEmpty( data.title )  ? (
-						<h2>{ data.title }</h2>
+						<h2 dangerouslySetInnerHTML={{__html: sanitize( data?.title )}}/>
 					) : null }
 					<div className={`page-content-wrap ${showSidebar ? 'has-sidebar' : '' }`}>
 						<section className="page-content">
@@ -47,7 +47,7 @@ const Page = ( props ) => {
 							{ ! isEmpty( data.content ) ? (
 								<div
 									dangerouslySetInnerHTML={ {
-										__html: sanitize( data.content ),
+										__html: data.content,
 									} }
 								/>
 							) : null }

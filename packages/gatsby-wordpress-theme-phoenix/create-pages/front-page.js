@@ -108,6 +108,7 @@ query GET_FRONT_PAGE {
 	    nodes {
 	      id
 	      databaseId
+	      bodyClasses
 	      title
 	      excerpt
 	      date
@@ -136,6 +137,7 @@ query GET_FRONT_PAGE {
 	        title
 	        excerpt
 	        content
+	        bodyClasses
 	        date
 	        uri
 	        author {
