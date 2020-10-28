@@ -5,14 +5,15 @@
 .site-header-container {
 
 	padding: 12px 0;
-
-	@include mq( medium ) {
-		padding-right: $container-padding;
-	}
 }
 
 .site-brand__description {
 	max-width: 200px;
+	margin-left: 12px;
+
+	@include mq(medium) {
+		max-width: 100%;
+	}
 }
 
 .site-header {
@@ -23,14 +24,16 @@
 
 	@include mq( medium ) {
 		align-items: center;
-		padding-top: 12px;
-		padding-bottom: 14px;
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: 0 20px;
 	}
 }
 
 .site-brand {
 	display: flex;
 	align-items: center;
+	padding-left: 10px;
 }
 
 // Menu
@@ -51,16 +54,12 @@
 	transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
 
 	&.menu-visible {
-		top: 63px;
+		top: 80px;
 		visibility: visible; /* shows sub-menu */
-		height: calc(100vh - 63px);
+		height: calc(100vh - 80px);
 		opacity: 1;
 		transform: translateY(0%);
 		transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
-
-		//@include mq( $from: medium, $until: large ) {
-		//	right: -20px;
-		//}
 	}
 
 	@include mq( large ) {
@@ -71,6 +70,12 @@
 		top: 0;
 		height: auto;
 		border: none;
+		transform: none;
+	}
+
+	@include mq( large ) {
+		visibility: visible; /* hides sub-menu */
+		opacity: 1;
 	}
 
 	.header-nav__wrap {
