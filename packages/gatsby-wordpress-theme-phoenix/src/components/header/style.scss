@@ -3,16 +3,19 @@
 @import './../../sass/vendor/hamburger/hamburgers.scss';
 
 .site-header-container {
-	padding-right: 5px;
+
+	padding: 12px 0;
 
 	@include mq( medium ) {
 		padding-right: $container-padding;
 	}
 }
 
+.site-brand__description {
+	max-width: 200px;
+}
+
 .site-header {
-	padding-top: 12px;
-	padding-bottom: 14px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -20,6 +23,8 @@
 
 	@include mq( medium ) {
 		align-items: center;
+		padding-top: 12px;
+		padding-bottom: 14px;
 	}
 }
 
@@ -33,21 +38,29 @@
 
 	display: flex;
 	position: absolute;
-	top: 70px;
-	right: -104vw;
-	transition: 0.3s all;
+	top: 95px;
+	left: 0;
+	visibility: hidden; /* hides sub-menu */
+	opacity: 0;
 	background-color: $white;
-	height: calc(100vh - 80px);
+	height: calc(100vh - 95px);
 	border-top: 1px solid $color__border;
 	width: 100vw;
 	z-index: 10;
+	transform: translateY(-2em);
+	transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
 
 	&.menu-visible {
-		right: -20px;
+		top: 63px;
+		visibility: visible; /* shows sub-menu */
+		height: calc(100vh - 63px);
+		opacity: 1;
+		transform: translateY(0%);
+		transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
 
-		@include mq( $from: medium, $until: large ) {
-			right: -20px;
-		}
+		//@include mq( $from: medium, $until: large ) {
+		//	right: -20px;
+		//}
 	}
 
 	@include mq( large ) {
@@ -64,6 +77,7 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
+
 
 		@include mq( large ) {
 			flex-direction: row;
@@ -145,6 +159,12 @@
 			padding: 10px;
 			color: $color__text;
 
+			&.active {
+				color: #1e5663;
+				font-weight: 800;
+				text-decoration: underline;
+			}
+
 			@include mq( large ) {
 				display: inline-block;
 				padding: 0;
@@ -210,5 +230,6 @@
 }
 
 .mobile-menu-open {
-	position: fixed;
+	height: 100vh;
+	overflow-y: hidden;
 }

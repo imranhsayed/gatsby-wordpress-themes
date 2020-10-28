@@ -20,6 +20,10 @@ const Nav = ( props ) => {
 	/* eslint-disable */
 	useEffect( () => {
 
+		console.warn( 'came' );
+
+		document.body.classList.remove('mobile-menu-open');
+
 		if ( Object.keys( headerMenuItems.edges ).length ) {
 			const newMenuState = {};
 
@@ -70,6 +74,7 @@ const Nav = ( props ) => {
 									<Link
 										className="header-nav__menu-link"
 										to={ normalizePath( menu.node.url ) }
+										activeClassName="active"
 									>
 										{ menu.node.label }
 									</Link>
@@ -119,6 +124,7 @@ const Nav = ( props ) => {
 															<Link
 																className="header-nav__submenu-link"
 																to={ normalizePath( subMenu.node.url ) }
+																activeClassName="active"
 															>
 																{ subMenu.node.label }
 															</Link>
